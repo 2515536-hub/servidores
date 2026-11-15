@@ -10,15 +10,36 @@
 </head>
 
 <body class="container text-center bg-dark">
-    <div class=" container-fluidrow text-center text-dark m-3">
-        <a href="../Index.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Menu principal</p>
+    <div
+        class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2 text-center text-dark my-3">
+        <a href="../Index.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Inicio</span>
         </a>
-        <a href="nosotros.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Nosotros</p>
+        <a href="nosotros.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Nosotros</span>
         </a>
-        <a href="servicios.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Servicios</p>
+        <a href="servicios.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Modulos</span>
+        </a>
+    </div>
+    <div class="container text-white">
+
+        <a href="truenas.html" class="btn btn-dark" target="_self">
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+
+        </a>
+
+        <a href="pbx.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+
         </a>
     </div>
     <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
@@ -127,6 +148,79 @@
                 y enviarlos al servidor.
             </p>
         </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Casos de uso y valor operativo de Zabbix:</h3>
+            <div class="row g-3 text-start text-white">
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Monitoreo proactivo</h5>
+                            <p class="card-text mb-0 text-white">
+                                Zabbix es muy útil para supervisar disponibilidad, uso de CPU, memoria, disco, red,
+                                tráfico web, servicios críticos y estado de equipos de red. Ayuda a detectar anomalías
+                                antes de que generen interrupciones para usuarios o clientes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Alertas y toma de decisiones</h5>
+                            <p class="card-text mb-0 text-white">
+                                Su verdadera fuerza reside en combinar métricas con alertas, mapas y reportes. Para
+                                organizaciones con múltiples servidores o servicios críticos, permite coordinar
+                                respuesta
+                                operativa, mejorar tiempos de atención y llevar control del rendimiento a lo largo del
+                                tiempo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Información técnica útil</h3>
+            <div class="table-responsive">
+                <table class="table table-dark table-bordered align-middle">
+                    <thead>
+                        <tr>
+                            <th class="text-warning">Aspecto</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-white">
+                        <tr>
+                            <td>Puertos principales</td>
+                            <td>10050/TCP para agentes, 10051/TCP para servidor/proxy, y 80/443/TCP para la interfaz web
+                                y la administración.</td>
+                        </tr>
+                        <tr>
+                            <td>Requisitos comunes</td>
+                            <td>Servidor con base de datos compatible, CPU y RAM suficientes según cantidad de hosts,
+                                además de permisos de red para agentes y proxies.</td>
+                        </tr>
+                        <tr>
+                            <td>Protocolos y métodos</td>
+                            <td>Agente Zabbix, SNMP, ICMP, HTTP/HTTPS, SSH, IPMI, JMX y otros protocolos según los
+                                elementos monitorizados.</td>
+                        </tr>
+                        <tr>
+                            <td>Componentes clave</td>
+                            <td>Servidor, base de datos, frontend web, agentes y proxies, todos trabajando junto a
+                                plantillas y desencadenadores.</td>
+                        </tr>
+                        <tr>
+                            <td>Consideraciones</td>
+                            <td>Es importante planificar almacenamiento, retención histórica y alertas para evitar
+                                saturación de la base de datos y ruido de notificaciones.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <hr class="text-white">
         <div class="container text-center bg-black">
 
@@ -134,14 +228,15 @@
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 <strong>Documentación:</strong> Consulta la <a
-                    href="https://www.zabbix.com/documentation/current/en/manual/introduction" class="alert-link">guía
+                    href="https://www.zabbix.com/documentation/current/en/manual/introduction" class="alert-link"
+                    target="_self">guía
                     oficial de Zabbix</a>. Las capturas que siguen se conservaron del tutorial de zabbix y son solo una
                 referencia visual de VirtualBox; no muestran la instalación de este servicio.
             </div>
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 <strong>VirtualBox:</strong> Consulta las <a href="https://www.virtualbox.org/wiki/Downloads"
-                    class="alert-link">descargas oficiales</a> si necesitas virtualizar el entorno.
+                    class="alert-link" target="_self">descargas oficiales</a> si necesitas virtualizar el entorno.
             </div>
             <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
                 <h2 class="text-center fw-bold">Preparación de la máquina virtual</h2>
@@ -331,7 +426,7 @@
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 <strong>Sin instancia pública:</strong> Configura el acceso de Zabbix en tu propio entorno; <a href="#"
-                    class="alert-link">no hay una dirección publicada aquí</a>.
+                    class="alert-link" target="_self">no hay una dirección publicada aquí</a>.
             </div>
             <div class="row text-center bg-black mt-1 rounded-4">
                 <div>
@@ -389,10 +484,31 @@
                                 <td>No hay instancia pública configurada aquí</td>
                             </tr>
                         </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
+    </div>
+    <div class="container text-white pb-2">
+
+        <a href="truenas.html" class="btn btn-dark" target="_self">
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+
+        </a>
+
+        <a href="pbx.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+
+        </a>
     </div>
 </body>
 
