@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zabbix - monitoreo de infraestructura</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="container text-center bg-dark">
+    <div class=" container-fluidrow text-center text-dark m-3">
+        <a href="../Index.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Menu principal</p>
+        </a>
+        <a href="nosotros.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Nosotros</p>
+        </a>
+        <a href="servicios.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Servicios</p>
+        </a>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
+        <h1 class="text-center text-white fw-bold">ZABBIX</h1>
+        <div class="container text-center bg-black col-9 mt-1 rounded-4 p-2">
+            <img src="../static/zabbix.jpg" alt="Zabbix" class="img-fluid rounded-4 mx-auto d-block ">
+        </div>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4">
+        <h3 class="text-center text-white fw-bold">¿Qué es Zabbix?</h3>
+        <p class="text-center text-white">
+            Zabbix es una plataforma de monitoreo de código abierto para redes, servidores, máquinas virtuales,
+            aplicaciones y servicios. Recopila métricas mediante agentes y comprobaciones sin agente, almacena los datos
+            en una base de datos y permite visualizar estados y generar alertas desde una interfaz web.
+        </p>
+        <h3 class="text-center text-white fw-bold">Características principales de Zabbix:</h3>
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Recopilación de métricas</h5>
+                        <p class="card-text">
+                            Recopilaci?n de m?tricas: admite agentes, SNMP y otras comprobaciones, con intervalos y
+                            claves configurables.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Alertas y eventos</h5>
+                        <p class="card-text">
+                            Alertas y eventos: los disparadores detectan condiciones y las acciones pueden notificar al
+                            equipo responsable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Arquitectura distribuida</h5>
+                        <p class="card-text">
+                            Arquitectura distribuida: servidor, base de datos, interfaz web, agentes y proxies
+                            opcionales se ajustan a distintos despliegues.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-white">
+        <div class="row text-center bg-black mt-1 rounded-4">
+            <div>
+                <h3 class="text-center text-white fw-bold col-12">Protocolos y tecnologías habituales:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Agente Zabbix y Zabbix agent 2 para recopilar datos
+                        del sistema.</li>
+                    <li class="list-group-item bg-dark text-white">SNMP para consultar equipos de red y recibir traps
+                        compatibles.</li>
+                    <li class="list-group-item bg-dark text-white">HTTP/HTTPS para comprobar sitios y servicios web.
+                    </li>
+                    <li class="list-group-item bg-dark text-white">IPMI, JMX, SSH y otros métodos según el tipo de
+                        elemento y configuración.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="text-white">
+        <div class="row">
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Ventajas de usar Zabbix:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Monitoreo centralizado de disponibilidad y
+                        rendimiento de distintos componentes.</li>
+                    <li class="list-group-item bg-dark text-white">Múltiples métodos de recopilación, incluidos agentes
+                        y comprobaciones sin agente.</li>
+                    <li class="list-group-item bg-dark text-white">Plantillas, disparadores y acciones reutilizan
+                        configuración y automatizan alertas.</li>
+                    <li class="list-group-item bg-dark text-white">Proxies opcionales permiten distribuir la
+                        recopilación en redes remotas.</li>
+                    <li class="list-group-item bg-dark text-white">Interfaz web con mapas, gráficos, datos históricos y
+                        reportes.</li>
+                </ul>
+            </div>
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Desventajas de usar Zabbix:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Requiere dimensionar y mantener la base de datos y el
+                        servidor de monitoreo.</li>
+                    <li class="list-group-item bg-dark text-white">La configuración de plantillas, elementos y
+                        disparadores puede requerir experiencia.</li>
+                    <li class="list-group-item bg-dark text-white">Una política de retención o un sondeo mal ajustado
+                        aumenta carga y almacenamiento.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="containter text-center bg-black">
+            <h3 class="text-center text-white fw-bold">Funcionamiento de Zabbix:</h3>
+            <p class="text-center text-white">
+                Zabbix recopila valores de hosts mediante agentes, servidor/proxy y comprobaciones compatibles. Los
+                datos se almacenan en una base de datos; elementos definen qué medir, disparadores describen condiciones
+                de problema y acciones generan notificaciones o tareas. La interfaz web permite configurar hosts,
+                revisar eventos y visualizar tendencias. Un proxy opcional puede recopilar datos en una ubicación remota
+                y enviarlos al servidor.
+            </p>
+        </div>
+        <hr class="text-white">
+        <div class="container text-center bg-black">
+
+            <h3 class="text-center text-white fw-bold">Virtualización e implementación de Zabbix:</h3>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Documentación:</strong> Consulta la <a
+                    href="https://www.zabbix.com/documentation/current/en/manual/introduction" class="alert-link">guía
+                    oficial de Zabbix</a>. Las capturas que siguen se conservaron del tutorial de zabbix y son solo una
+                referencia visual de VirtualBox; no muestran la instalación de este servicio.
+            </div>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>VirtualBox:</strong> Consulta las <a href="https://www.virtualbox.org/wiki/Downloads"
+                    class="alert-link">descargas oficiales</a> si necesitas virtualizar el entorno.
+            </div>
+            <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
+                <h2 class="text-center fw-bold">Preparación de la máquina virtual</h2>
+                <li>Crea una máquina virtual con un sistema operativo compatible con la versión elegida, siguiendo los
+                    requisitos de Zabbix.</li>
+                <img src="../static/zabbix/1.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Se asigna CPU y memoria según la carga prevista; los valores dependen del entorno.</li>
+                <img src="../static/zabbix/3.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/zabbix/4.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Se selecciona la opcion de try or install ubuntu server.</li>
+                <img src="../static/zabbix/5.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Revisa almacenamiento, adaptador de red y recursos antes de crear la máquina virtual.</li>
+                <img src="../static/zabbix/6.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora revisaremos el funcionamiento de la red por medio de algunos comandos.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">ip -br addr, ip route, ping -c google.com</p>
+                </div>
+                <img src="../static/zabbix/7.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora actualizaremos nuestro SO, con los siguientes comandos, una vez terminado selecciona el idioma
+                    del teclado.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo apt update, sudo apt upgrade -y</p>
+                </div>
+                <img src="../static/zabbix/8.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora empezaremos con la instalacion de zabbix y su configuracion dentro de nuestro OS, este comando
+                    contiene la configuración del repositorio oficial de Zabbix 7.4 para Ubuntu 24.04.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">wget
+                        https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
+                    </p>
+                </div>
+                <img src="../static/zabbix/9.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora con este comando aplicaremos e instalaremos los paquetes para zabbix.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo dpkg -i xabbix-release_latest_7.4+ubuntu24.04_all.deb</p>
+                </div>
+                <img src="../static/zabbix/10.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora actualizaremos para la activacion completa del repositorio.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo apt update</p>
+                </div>
+                <img src="../static/zabbix/11.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Instalaremos los paquetes la implementacion web y de base de datos.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf
+                        zabbix-sql-scripts zabbix-agent mysql-server -y</p>
+                </div>
+                <img src="../static/zabbix/13.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Una vez instalado el paquete, usaremos la base de datos para zabbix colocando lo siguiente</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo mysql</p>
+                    <p class="fw-bold">
+                        CREATE DATABASE zabbix CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+                    </p>
+                    <p class="fw-bold">
+                        CREATE USER 'zabbix'@'localhost' IDENTIFIED BY 'Zbx_2026_Angel!';
+                    </p>
+                    <p class="fw-bold">
+                        GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'localhost';
+                    </p>
+                    <p class="fw-bold">
+                        SET GLOBAL log_bin_trust_function_creators = 1;
+                    </p>
+                    <p class="fw-bold">
+                        EXIT;
+                    </p>
+                </div>
+                <img src="../static/zabbix/14.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora colocaremos la contraseña para la base de datos en zabbix</li>
+                <img src="../static/zabbix/18.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/zabbix/19.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora iniciaremos los servicios de mysql, zabbix-server, zabbix-agent, y apache2</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo systemctl enable --now mysql</p>
+                    <p class="fw-bold">sudo systemctl enable --now zabbix-server</p>
+                    <p class="fw-bold">sudo systemctl enable --now zabbix-agent</p>
+                    <p class="fw-bold">sudo systemctl enable --now apache2</p>
+                </div>
+                <img src="../static/zabbix/20.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/zabbix/21.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/zabbix/22.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/zabbix/23.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora revisaremos que esten levantados los servicios de mysql, zabbix-server, zabbix-agent, y
+                    apache2</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo systemctl status --now mysql</p>
+                    <p class="fw-bold">sudo systemctl status --now zabbix-server</p>
+                    <p class="fw-bold">sudo systemctl status --now zabbix-agent</p>
+                    <p class="fw-bold">sudo systemctl status --now apache2</p>
+                </div>
+                <img src="../static/zabbix/24.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/zabbix/25.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/zabbix/26.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora se instalaran los paquetes de idioma en español y reiniciaremos los servicioos para su
+                    implementacion.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo apt install locales lenguage-pack-es -y </p>
+                    <p class="fw-bold">sudo locale-gen es ES.UTF-8 </p>
+                    <p class="fw-bold">sudo apt update-locale </p>
+                </div>
+                <img src="../static/zabbix/27.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/zabbix/28.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/zabbix/29.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/zabbix/30.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>En el navegador colocar la IP de la maquina y ahora empezaremos a configurar, donde escogeremos el
+                    idioma y daremos click en siguiente.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">ip -c a </p>
+                </div>
+                <img src="../static/zabbix/31.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Aqui vamos a verificar que se encuentran todos los requisitos aprobados.</li>
+                <img src="../static/zabbix/32.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora configuraremos la base de datos con las credenciales que ya hemos creado con anterioridad y
+                    daremos click en siguiente.</li>
+                <img src="../static/zabbix/33.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Aqui podremos seleccionar la zona horaria y daremos click en siguiente.</li>
+                <img src="../static/zabbix/34.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/zabbix/35.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Verificamos que este todo correctamente configurado y daremos click en siguiente y por ultimo en
+                    finalizar</li>
+                <img src="../static/zabbix/36.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora con zabbix instalado, podemos iniciar sesion con las credenciales.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">Usuario: Admin</p>
+                    <p class="fw-bold">Passwd: zabbix</p>
+                </div>
+                <img src="../static/zabbix/37.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ingresamos al apartado Informes y seleccionamos Información del sistema. Aquí podemos consultar el
+                    estado general de nuestro servidor Zabbix, verificar que se encuentre en ejecución y revisar
+                    información importante como la versión instalada, los equipos registrados, las plantillas, las
+                    métricas y los usuarios conectados. Esto nos permite comprobar que la instalación funciona
+                    correctamente.</li>
+                <img src="../static/zabbix/38.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ingresamos a Recopilación de datos → Equipos y seleccionamos el equipo Zabbix server. Revisamos que
+                    tuviera asignadas las plantillas Linux by Zabbix agent y Zabbix server health, las cuales permiten
+                    supervisar el rendimiento del sistema y el estado del servidor Zabbix.</li>
+                <img src="../static/zabbix/39.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Comprobamos la disponibilidad del equipo desde Recopilación de datos → Equipos. El indicador ZBX
+                    aparece en verde, lo que confirma que existe comunicación correcta entre el servidor Zabbix y el
+                    agente instalado.</li>
+                <img src="../static/zabbix/40.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ingresamos a Monitorización → Datos más recientes y seleccionamos el equipo Zabbix server. En esta
+                    sección podemos observar la información que recopila el agente en tiempo real, como el uso del
+                    procesador, memoria RAM, almacenamiento y tráfico de red. Esto nos permite comprobar que el
+                    monitoreo está funcionando correctamente.</li>
+                <img src="../static/zabbix/41.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ingresamos a Monitorización → Datos más recientes, buscamos la métrica CPU utilization y
+                    seleccionamos la opción Gráficas. En esta sección podemos observar el porcentaje de uso del
+                    procesador a lo largo del tiempo, lo que nos permite supervisar su rendimiento y detectar posibles
+                    aumentos en su utilización.</li>
+                <img src="../static/zabbix/42.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ingresamos a Monitorización → Datos más recientes, buscamos la métrica Available memory y
+                    seleccionamos Gráficas. Esta opción nos permite observar la cantidad de memoria RAM disponible en el
+                    servidor y sus variaciones a lo largo del tiempo, facilitando la supervisión del consumo de
+                    recursos.</li>
+                <img src="../static/zabbix/43.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ingresamos a Monitorización → Datos más recientes, buscamos la métrica FS [/]: Space: Used, in % y
+                    seleccionamos Gráficas. Esta herramienta permite observar el porcentaje de almacenamiento utilizado
+                    en el disco del servidor a lo largo del tiempo, facilitando el control del espacio disponible y
+                    evitando que se llene.</li>
+                <img src="../static/zabbix/44.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>En este apartado podremos ver y monitorizar el trafico de red que hay de entrada.</li>
+                <img src="../static/zabbix/45.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Aqui podemos monitorizar el trfico de red que hay de salida.</li>
+                <img src="../static/zabbix/46.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ingresamos a Monitorización → Problemas y revisamos las alertas generadas por Zabbix. En esta
+                    sección podemos identificar fallas o situaciones que requieren atención, conocer su gravedad y
+                    consultar el equipo afectado. En nuestra revisión no se encontraron problemas durante la última
+                    hora, lo que indica que no había alertas activas en ese periodo.</li>
+                <img src="../static/zabbix/47.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+            </ul>
+
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Conclusión sobre Zabbix:</h3>
+            <p class="text-center text-white">
+                Zabbix ofrece monitoreo centralizado y flexible para infraestructura y servicios, con recolección
+                distribuida, visualización y alertas. Para mantenerlo útil y estable, es importante dimensionar la base
+                de datos, elegir plantillas adecuadas y ajustar umbrales, intervalos y retención.
+            </p>
+
+        </div>
+
+        <div class="container text-center bg-black text-white col-12 mt-1 rounded-4">
+            <h2 class="text-center text-white fw-bold">Acceso y referencia del servicio:</h2>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Sin instancia pública:</strong> Configura el acceso de Zabbix en tu propio entorno; <a href="#"
+                    class="alert-link">no hay una dirección publicada aquí</a>.
+            </div>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Parámetro de acceso (configurar en el entorno)</p>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Parámetro</th>
+                                <th scope="col">Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dirección</td>
+                                <td>No configurada ni publicada en este proyecto</td>
+                            </tr>
+                        </tbody>
+                </div>
+            </div>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Datos técnicos de referencia</p>
+                        <thead>
+                            <tr>
+                                <th scope="col">Parámetro</th>
+                                <th scope="col">Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>Software</td>
+                                <td>Zabbix</td>
+                            </tr>
+                            <tr>
+                                <td>Función</td>
+                                <td>Monitoreo de infraestructura y servicios</td>
+                            </tr>
+                            <tr>
+                                <td>Componentes</td>
+                                <td>Servidor, base de datos, frontend, agentes</td>
+                            </tr>
+                            <tr>
+                                <td>Puerto web habitual</td>
+                                <td>80 / 443 según despliegue</td>
+                            </tr>
+                            <tr>
+                                <td>Agente</td>
+                                <td>10050 / 10051 según configuración</td>
+                            </tr>
+                            <tr>
+                                <td>Implementación</td>
+                                <td>No hay instancia pública configurada aquí</td>
+                            </tr>
+                        </tbody>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

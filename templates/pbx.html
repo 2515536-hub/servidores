@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBX - central telefónica privada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="container text-center bg-dark">
+    <div class=" container-fluidrow text-center text-dark m-3">
+        <a href="../Index.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Menu principal</p>
+        </a>
+        <a href="nosotros.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Nosotros</p>
+        </a>
+        <a href="servicios.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Servicios</p>
+        </a>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
+        <h1 class="text-center text-white fw-bold">PBX</h1>
+        <div class="container text-center bg-black col-9 mt-1 rounded-4 p-2">
+            <img src="../static/pbx.jpg" alt="PBX" class="img-fluid rounded-4 mx-auto d-block ">
+        </div>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4">
+        <h3 class="text-center text-white fw-bold">¿Qué es PBX?</h3>
+        <p class="text-center text-white">
+            PBX (Private Branch Exchange) es una central telefónica privada que administra extensiones y enruta llamadas
+            internas y externas. Una solución PBX puede ofrecer transferencia, colas, buzón de voz y menús IVR; Asterisk
+            es una de las plataformas de software que puede utilizarse para construirla.
+        </p>
+        <h3 class="text-center text-white fw-bold">Características principales de PBX:</h3>
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Enrutamiento de llamadas</h5>
+                        <p class="card-text">
+                            Enrutamiento de llamadas: dirige llamadas entre extensiones, troncales y destinos segn el
+                            plan de marcacion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Servicios de telefonía</h5>
+                        <p class="card-text">
+                            Servicios de telefonia: puede ofrecer transferencia, grupos de timbrado, colas, IVR y buzon
+                            de voz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Integración de dispositivos</h5>
+                        <p class="card-text">
+                            Integración de dispositivos: conecta telefonos IP y softphones con troncales SIP u otras
+                            pasarelas configuradas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center bg-black mt-1 rounded-4">
+            <div>
+                <h3 class="text-center text-white fw-bold col-12">Protocolos y tecnologías habituales:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">SIP para señalización de llamadas en sistemas
+                        compatibles.</li>
+                    <li class="list-group-item bg-dark text-white">RTP para transportar audio; SRTP puede proteger
+                        medios si los extremos lo soportan.</li>
+                    <li class="list-group-item bg-dark text-white">IAX2 en despliegues Asterisk que lo utilicen.</li>
+                    <li class="list-group-item bg-dark text-white">SIP trunk o pasarela de telefonía para comunicar con
+                        redes externas, según proveedor.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="text-white">
+        <div class="row">
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Ventajas de usar PBX:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Centraliza extensiones y reglas de llamadas para una
+                        organización.</li>
+                    <li class="list-group-item bg-dark text-white">Permite funciones como colas, IVR, grupos de timbrado
+                        y buzón de voz.</li>
+                    <li class="list-group-item bg-dark text-white">Puede integrarse con teléfonos IP, softphones y
+                        troncales compatibles.</li>
+                    <li class="list-group-item bg-dark text-white">Las plataformas de software permiten adaptar el plan
+                        de marcación al negocio.</li>
+                    <li class="list-group-item bg-dark text-white">Puede escalarse por etapas, con planificación de
+                        capacidad y seguridad.</li>
+                </ul>
+            </div>
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Desventajas de usar PBX:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">La calidad de voz depende de latencia, pérdida de
+                        paquetes y configuración de red.</li>
+                    <li class="list-group-item bg-dark text-white">Conectar la central a redes externas requiere
+                        controlar accesos y proteger credenciales.</li>
+                    <li class="list-group-item bg-dark text-white">La operación y continuidad requieren respaldo,
+                        monitoreo y conocimientos de telefonía IP.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="containter text-center bg-black">
+            <h3 class="text-center text-white fw-bold">Funcionamiento de PBX:</h3>
+            <p class="text-center text-white">
+                Una PBX registra extensiones y procesa llamadas de acuerdo con un plan de marcación. Al originarse una
+                llamada, la central valida el destino y decide si la conecta a otra extensión o a una troncal; RTP
+                transporta el audio entre los extremos. La administración incluye teléfonos, rutas, permisos, horarios,
+                códecs, seguridad de señalización y registros. Los detalles dependen del software y del proveedor de
+                telefonía.
+            </p>
+        </div>
+        <hr class="text-white">
+        <div class="container text-center bg-black">
+
+            <h3 class="text-center text-white fw-bold">Virtualización e implementación de PBX:</h3>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Documentación:</strong> Consulta la <a href="https://docs.asterisk.org/Getting-Started/"
+                    class="alert-link">guía oficial de PBX</a>. Las capturas que siguen se conservaron del tutorial de
+                pbx y son solo una referencia visual de VirtualBox; no muestran la instalación de este servicio.
+            </div>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>VirtualBox:</strong> Consulta las <a href="https://www.virtualbox.org/wiki/Downloads"
+                    class="alert-link">descargas oficiales</a> si necesitas virtualizar el entorno.
+            </div>
+            <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
+                <h2 class="text-center fw-bold">Preparación de la máquina virtual</h2>
+                <li>Para la instalacion de nuestro PBX, sera necesaria actualizar nuesto SO.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo apt update</p>
+                </div>
+                <img src="../static/pbx/1.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora aplicar esas actualizaciones</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo apt upgrade -y</p>
+                </div>
+                <img src="../static/pbx/2.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Pedira seleccionar el idioma del teclado, por lo cual seleccionar el idioma deseado.</li>
+                <img src="../static/pbx/3.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora se instala asterisk, con el comando vamos a crear nuestro servicio de asterisk, el usuario del
+                    sistema asterisk y la carpeta de configuración /etc/Asterisk..</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo apt install Asterisk -y</p>
+                </div>
+                <div class="alert alert-info alert-dismissible fade show">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>Asterisk:</strong> Asterisk es un programa de software libre y de código abierto (bajo
+                    licencia GPL) que permite convertir un ordenador o un servidor común en una central telefónica
+                    privada o PBX
+                </div>
+                <img src="../static/pbx/4.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Una vez instalado Asterisk, lo vamos a configurar para que inicie cada que prendamos la maquina.
+                </li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo systemctl enable --now Asterisk</p>
+                </div>
+                <img src="../static/pbx/5.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Revisaremos que nuestro servicio este levantado.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo systemctl status Asterisk</p>
+                </div>
+                <img src="../static/pbx/6.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora vamos a crear las extensiones (pjsip.conf), con este archivo vamos a definir quién se va a
+                    poder conectar a nuestro PBX. Las colocaremos tal cual este en la captura, <strong>una vez con 1001
+                        y otra
+                        vez abajo la misma configuracion pero con 1002.</strong> </li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo nano /etc/asterisk/pjsip.conf</p>
+                </div>
+                <img src="../static/pbx/8.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora vamos a crear las reglas de llamada (extensions.conf), gracias a este archivo que es el
+                    dialplan, que nos va a definir qué pasa cuando alguien marca un número, se colocara la informacion
+                    tal cual en el archivo /etc/asterisk/extensions.conf</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo nano /etc/asterisk/extensions.conf</p>
+                </div>
+                <img src="../static/pbx/10.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <!--                 <hr class="text-white">
+                <h2 class="text-center fw-bold">Instalación y configuración de PBX</h2> -->
+                <li>Una vez hayamos configurado las extensiones vamos a reiniciar nuestro servicio de Asterisk.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo systemctl restart Asterisk</p>
+                </div>
+                <img src="../static/pbx/11.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Por ultimo entraremos a la consola de Asterisk con este comando.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo asterisk -rvvv</p>
+                </div>
+                <img src="../static/pbx/12.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Dentro de la consola colocaremos un comando que lista nuestras extensiones y si están conectadas
+                    (Unavailable significa que aún no se registró ningún teléfono).</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">pjsip show endpoints</p>
+                </div>
+                <img src="../static/pbx/14.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Tambien colocaremos otro comando para ver el dialplan cargado y podemos salir con el comando "exit".
+                </li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">pjsip show endpoints</p>
+                </div>
+                <img src="../static/pbx/15.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Asi estarian ambos en funcionamiento.</li>
+                <img src="../static/pbx/16.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora con una aplicacion en diferentes dispositivos, podremos realizar llamadas entre ellos,
+                    colocando el usuario y la ip
+                    los usuarios siendo 1007 y 1002.</li>
+                <img src="../static/pbx/18.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+            </ul>
+
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Conclusión sobre PBX:</h3>
+            <p class="text-center text-white">
+                Una PBX organiza las comunicaciones de voz mediante extensiones, reglas de enrutamiento y conexiones
+                externas. Una solución basada en software como Asterisk permite personalizar esas funciones, pero
+                requiere controlar el acceso, proteger la señalización y validar la calidad de red antes de prestar
+                servicio.
+            </p>
+
+        </div>
+
+        <div class="container text-center bg-black text-white col-12 mt-1 rounded-4">
+            <h2 class="text-center text-white fw-bold">Acceso y referencia del servicio:</h2>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Sin instancia pública:</strong> Configura el acceso de PBX en tu propio entorno; <a href="#"
+                    class="alert-link">no hay una dirección publicada aquí</a>.
+            </div>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Ip de la maquina</p>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Parámetro</th>
+                                <th scope="col">ip</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dirección</td>
+                                <td>192.168.1.100</td>
+                            </tr>
+                        </tbody>
+                </div>
+            </div>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Credenciales de acceso</p>
+                        <thead>
+                            <tr>
+                                <th scope="col">Usuario</th>
+                                <th scope="col">ip</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>1001</td>
+                                <td>192.168.1.100</td>
+                            </tr>
+                            <tr>
+                                <td>1002</td>
+                                <td>192.168.1.100</td>
+                            </tr>
+                        </tbody>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

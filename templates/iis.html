@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIS - Internet Information Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="container text-center bg-dark">
+    <div class=" container-fluidrow text-center text-dark m-3">
+        <a href="../Index.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Menu principal</p>
+        </a>
+        <a href="nosotros.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Nosotros</p>
+        </a>
+        <a href="servicios.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Servicios</p>
+        </a>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
+        <h1 class="text-center text-white fw-bold">IIS</h1>
+        <div class="container text-center bg-black col-9 mt-1 rounded-4 p-2">
+
+            <img src="../static/IIS.jpg" alt="IIS" class="img-fluid rounded-4 mx-auto d-block ">
+        </div>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4">
+        <h3 class="text-center text-white fw-bold">¿Qué es IIS?</h3>
+        <p class="text-center text-white">
+            IIS (Internet Information Services) es el servidor web de Microsoft para Windows. Publica sitios y
+            aplicaciones mediante HTTP/HTTPS y se integra con componentes de Windows Server, como HTTP.sys y Windows
+            Process Activation Service (WAS), para recibir solicitudes y administrar procesos de trabajo.
+        </p>
+        <h3 class="text-center text-white fw-bold">Características principales de IIS:</h3>
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Procesamiento de solicitudes</h5>
+                        <p class="card-text">
+                            Procesamiento de solicitudes: HTTP.sys recibe tr?fico HTTP/HTTPS y lo dirige al sitio y al
+                            grupo de aplicaciones correspondiente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Integración con Windows</h5>
+                        <p class="card-text">
+                            Integraci?n con Windows: se administra como rol de Windows Server y puede alojar contenido
+                            est?tico y aplicaciones compatibles, incluido ASP.NET.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Administración de sitios</h5>
+                        <p class="card-text">
+                            Administraci?n por sitios: permite configurar enlaces, certificados, m?dulos, permisos y
+                            grupos de aplicaciones de manera independiente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center bg-black mt-1 rounded-4">
+            <div>
+                <h3 class="text-center text-white fw-bold col-12">Protocolos y tecnologías habituales:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">HTTP para servir sitios web y aplicaciones.</li>
+                    <li class="list-group-item bg-dark text-white">HTTPS con TLS para proteger las conexiones web.</li>
+                    <li class="list-group-item bg-dark text-white">FTP/FTPS cuando se instala y configura el servicio
+                        FTP de IIS.</li>
+                    <li class="list-group-item bg-dark text-white">WebSocket para aplicaciones que requieren
+                        comunicación bidireccional.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="text-white">
+        <div class="row">
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Ventajas de usar IIS:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Integración nativa con Windows Server y sus
+                        herramientas de administración.</li>
+                    <li class="list-group-item bg-dark text-white">Administración centralizada de sitios, grupos de
+                        aplicaciones y certificados.</li>
+                    <li class="list-group-item bg-dark text-white">Soporte para contenido estático y aplicaciones web
+                        compatibles con .NET.</li>
+                    <li class="list-group-item bg-dark text-white">Aislamiento de aplicaciones mediante grupos de
+                        aplicaciones.</li>
+                    <li class="list-group-item bg-dark text-white">Registros y módulos configurables para operación y
+                        diagnóstico.</li>
+                </ul>
+            </div>
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Desventajas de usar IIS:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Requiere Windows y licenciamiento de la plataforma
+                        correspondiente.</li>
+                    <li class="list-group-item bg-dark text-white">Las opciones disponibles dependen de la versión y los
+                        roles instalados.</li>
+                    <li class="list-group-item bg-dark text-white">Permisos, módulos o enlaces mal configurados pueden
+                        exponer aplicaciones.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="containter text-center bg-black">
+            <h3 class="text-center text-white fw-bold">Funcionamiento de IIS:</h3>
+            <p class="text-center text-white">
+                IIS se instala como rol de Windows. HTTP.sys escucha las solicitudes HTTP/HTTPS y las entrega al sitio y
+                grupo de aplicaciones configurados; WAS administra la activación de procesos. El administrador define
+                enlaces por IP, puerto y nombre de host, selecciona el directorio de contenido, controla permisos y
+                certificados, y revisa los registros para comprobar solicitudes y errores.
+            </p>
+        </div>
+        <hr class="text-white">
+        <div class="container text-center bg-black">
+
+            <h3 class="text-center text-white fw-bold">Virtualización e implementación de IIS:</h3>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Documentación:</strong> Consulta la <a
+                    href="https://learn.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture"
+                    class="alert-link">guía oficial de IIS</a>. Las capturas que siguen se conservaron del tutorial de
+                iis y son solo una referencia visual de VirtualBox; no muestran la instalación de este servicio.
+            </div>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>VirtualBox:</strong> Consulta las <a href="https://www.virtualbox.org/wiki/Downloads"
+                    class="alert-link">descargas oficiales</a> si necesitas virtualizar el entorno.
+            </div>
+            <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
+                <h2 class="text-center fw-bold">Preparación de la máquina virtual</h2>
+                <li>Crea una máquina virtual con Windows Server, siguiendo los requisitos de IIS.</li>
+                <img src="../static/iis/1.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Asigna CPU y memoria según la carga prevista; los valores dependen del entorno.</li>
+                <img src="../static/iis/2.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Crea un disco virtual con espacio suficiente para el sistema y los datos del servicio.</li>
+                <img src="../static/iis/3.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Monta la ISO del sistema operativo y confirma el orden de arranque de la VM y Selecciona el idioma
+                    una vez ya haya iniciado la vm.</li>
+                <img src="../static/iis/4.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Instala a version estandar</li>
+                <img src="../static/iis/5.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Selecciona el disco duro donde se instalará el sistema operativo.</li>
+                <img src="../static/iis/6.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>pasamos a la interfas de window server
+                    y ademas empezamos a agregar los roles y caracteristicas</li>
+                <img src="../static/iis/8.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>selecione los servicios de dominio, DHCP, DNS y de IIS para tener nuestra pagina web sin problemas
+                    Los demas parametros tenemos que dejarlos tal y como estan y darle en siguiente.</li>
+                <img src="../static/iis/9.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Compruebe y proceda con la instalacion de los servicios.</li>
+                <img src="../static/iis/10.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <!--                 <hr class="text-white">
+                <h2 class="text-center fw-bold">Instalación y configuración de IIS</h2> -->
+                <li>Treminando la instalacion nos deja implementar el iss
+                    y para pasar al administradorde IIS</li>
+                <img src="../static/iis/11.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/iis/12.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>nos aparecera una ventana que nos muestra nuestros sitios, el que es por defecto
+                    y ademas si queremos otro sitio le damos clik derecho a sitios para agregar otro</li>
+                <img src="../static/iis/13.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>para aceder a la pagina web debemos saber la ip asi que entramos al cmd de windows server y ponemos
+                    el comando "ipconfig"
+                    nos mostrara el direcion con terminacion 0.199 la cual debemos de poner en nuestro navegador si es
+                    que tenemos la MV en adaptador puente</li>
+                <img src="../static/iis/14.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Para al fin observar nuestra pagina web que sale por defecto
+                    Y si uno lo desea puede cambiarlo con un index pero ya es a gusto de cada quien</li>
+                <img src="../static/iis/15.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+            </ul>
+
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Conclusión sobre IIS:</h3>
+            <p class="text-center text-white">
+                IIS ofrece una plataforma integrada para alojar sitios y aplicaciones en Windows. Su administración por
+                sitios y grupos de aplicaciones facilita separar cargas, pero requiere mantener Windows actualizado,
+                limitar permisos y configurar correctamente enlaces y TLS.
+            </p>
+
+        </div>
+
+        <div class="container text-center bg-black text-white col-12 mt-1 rounded-4">
+            <h2 class="text-center text-white fw-bold">Acceso y referencia del servicio:</h2>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Sin instancia pública:</strong> Configura el acceso de IIS en tu propio entorno; <a href="#"
+                    class="alert-link">no hay una dirección publicada aquí</a>.
+            </div>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Parámetro de acceso (configurar en el entorno)</p>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Parámetro</th>
+                                <th scope="col">Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dirección</td>
+                                <td>No configurada ni publicada en este proyecto</td>
+                            </tr>
+                        </tbody>
+                </div>
+            </div>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Datos técnicos de referencia</p>
+                        <thead>
+                            <tr>
+                                <th scope="col">Parámetro</th>
+                                <th scope="col">Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>Plataforma</td>
+                                <td>Windows Server</td>
+                            </tr>
+                            <tr>
+                                <td>Función</td>
+                                <td>Servidor web y de aplicaciones</td>
+                            </tr>
+                            <tr>
+                                <td>Protocolos</td>
+                                <td>HTTP, HTTPS; FTP opcional</td>
+                            </tr>
+                            <tr>
+                                <td>Puertos web habituales</td>
+                                <td>80 / 443</td>
+                            </tr>
+                            <tr>
+                                <td>Herramienta</td>
+                                <td>IIS Manager</td>
+                            </tr>
+                            <tr>
+                                <td>Implementación</td>
+                                <td>Requiere configuración en el entorno</td>
+                            </tr>
+                        </tbody>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

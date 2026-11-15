@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samba - servidor de archivos SMB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="container text-center bg-dark">
+    <div class=" container-fluidrow text-center text-dark m-3">
+        <a href="../Index.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Menu principal</p>
+        </a>
+        <a href="nosotros.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Nosotros</p>
+        </a>
+        <a href="servicios.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Servicios</p>
+        </a>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
+        <h1 class="text-center text-white fw-bold">SAMBA</h1>
+        <div class="container text-center bg-black col-9 mt-1 rounded-4 p-2">
+
+            <img src="../static/samba.png" alt="Samba" class="img-fluid rounded-4 mx-auto d-block ">
+        </div>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4">
+        <h3 class="text-center text-white fw-bold">¿Qué es Samba?</h3>
+        <p class="text-center text-white">
+            Samba es una implementación de software libre del protocolo SMB que permite compartir archivos e impresoras
+            entre sistemas Unix/Linux y clientes Windows. Puede operar como servidor independiente o integrarse con un
+            dominio, según el diseño y la configuración de la red.
+        </p>
+        <h3 class="text-center text-white fw-bold">Características principales de Samba:</h3>
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Compartición de archivos</h5>
+                        <p class="card-text">
+                            Compartici?n de archivos: publica directorios de red mediante recursos compartidos SMB y
+                            controla qui?n puede acceder.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Autenticación y permisos</h5>
+                        <p class="card-text">
+                            Autenticaci?n y permisos: combina cuentas del sistema, usuarios Samba y reglas de acceso
+                            para proteger los recursos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Integración de red</h5>
+                        <p class="card-text">
+                            Integraci?n de red: puede trabajar como servidor independiente o participar en entornos de
+                            dominio compatibles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center bg-black mt-1 rounded-4">
+            <div>
+                <h3 class="text-center text-white fw-bold col-12">Protocolos y tecnologías habituales:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">SMB2 y SMB3 para compartir archivos en redes
+                        actuales.</li>
+                    <li class="list-group-item bg-dark text-white">SMB sobre TCP, normalmente en el puerto 445.</li>
+                    <li class="list-group-item bg-dark text-white">DNS y resolución de nombres para localizar servidores
+                        y recursos.</li>
+                    <li class="list-group-item bg-dark text-white">Kerberos/LDAP cuando se integra con un dominio
+                        compatible.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="text-white">
+        <div class="row">
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Ventajas de usar Samba:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Interoperabilidad entre clientes Windows y servidores
+                        Unix/Linux.</li>
+                    <li class="list-group-item bg-dark text-white">Permite compartir archivos e impresoras desde un
+                        servidor central.</li>
+                    <li class="list-group-item bg-dark text-white">Control de acceso por recurso, usuario y grupo.</li>
+                    <li class="list-group-item bg-dark text-white">Puede integrarse con dominios en despliegues
+                        compatibles.</li>
+                    <li class="list-group-item bg-dark text-white">Software libre con documentación y herramientas de
+                        administración.</li>
+                </ul>
+            </div>
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Desventajas de usar Samba:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">La configuración de permisos Unix y permisos de
+                        compartición requiere atención.</li>
+                    <li class="list-group-item bg-dark text-white">La integración con dominios y autenticación
+                        centralizada añade complejidad.</li>
+                    <li class="list-group-item bg-dark text-white">Los recursos invitados sin autenticación pueden
+                        exponer datos y deben evitarse salvo necesidad controlada.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="containter text-center bg-black">
+            <h3 class="text-center text-white fw-bold">Funcionamiento de Samba:</h3>
+            <p class="text-center text-white">
+                Samba publica recursos definidos en smb.conf y atiende clientes SMB. En un servidor independiente, las
+                cuentas locales y las credenciales Samba deben estar habilitadas; el acceso depende además de los
+                permisos del sistema de archivos y de las reglas del recurso compartido. En redes de dominio, la
+                autenticación y resolución de nombres dependen también de la infraestructura correspondiente.
+            </p>
+        </div>
+        <hr class="text-white">
+        <div class="container text-center bg-black">
+
+            <h3 class="text-center text-white fw-bold">Virtualización e implementación de Samba:</h3>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Documentación:</strong> Consulta la <a
+                    href="https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server"
+                    class="alert-link">guía oficial de Samba</a>. Las capturas que siguen se conservaron del tutorial de
+                TrueNAS y son solo una referencia visual de VirtualBox; no muestran la instalación de este servicio.
+            </div>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>VirtualBox:</strong> Consulta las <a href="https://www.virtualbox.org/wiki/Downloads"
+                    class="alert-link">descargas oficiales</a> si necesitas virtualizar el entorno.
+            </div>
+            <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
+                <h2 class="text-center fw-bold">Preparación de la máquina virtual</h2>
+                <li>Para la instalacion de nuestro samba, sera necesaria actualizar nuesto SO.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo apt update</p>
+                </div>
+                <img src="../static/samba/1.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora podremos instalar samba</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo apt install samba -y</p>
+                </div>
+                <img src="../static/samba/2.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Verificamos el estado de nuestro servicio samba.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo systemctl status smbd</p>
+                </div>
+                <img src="../static/samba/3.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Crearemos las carpetas que necesitaremos para el intercambio de archivos.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">mkdir ~/usuario</p>
+                </div>
+                <img src="../static/samba/4.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora asignaremos los permisos para que puedan leer, escribir y ejecutar archivos en la carpeta.
+                </li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo chmod -R 777 ~/usuario</p>
+                </div>
+                <img src="../static/samba/5.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Revisaremos que se haya asignado correctamente los permisos.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">ls -ld ~/usuario</p>
+                </div>
+                <img src="../static/samba/6.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Abre el archivo de configuración principal de Samba usando el editor. </li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo nano /etc/samba/smb.conf</p>
+                </div>
+                <img src="../static/samba/7.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Desplázate hasta el final del archivo y añade el siguiente bloque de configuración para definir tu
+                    recurso compartido.</li>
+                <img src="../static/samba/8.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Para que el servidor aplique la nueva configuración, reinicia el servicio</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo systemctl restart smbd</p>
+                </div>
+                <img src="../static/samba/9.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Si tienes el firewall activo, debes permitir el tráfico de Samba. Sudo ufw allow samba </li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo ufw allow samba</p>
+                </div>
+                <img src="../static/samba/10.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <!--                 <hr class="text-white">
+                <h2 class="text-center fw-bold">Instalación y configuración de samba</h2> -->
+                <li>Consultamos IP para posteriormente entrar al servidor desde nuestro navegador en el explorador de
+                    Windows.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">ip a</p>
+                </div>
+                <img src="../static/samba/11.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+
+                <li>Creamos los usuarios para cada uno de los integrantes con la misma contraseña para que pueda acceder
+                    a las carpetas.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo adduser nombre_de_usuario</p>
+                    <p class="fw-bold">sudo passwd nombre_de_usuario</p>
+                </div>
+                <img src="../static/samba/12.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/samba/13.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ponemos la IP en la barra superior y nos muestra esta ventana en donde ponemos el usuario y
+                    contraseña, dependiendo del usuario que este entrando.
+                </li>
+                <img src="../static/samba/14.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Listo, podemos entrar a la carpeta de cualquier usuario y ver los archivos que tengan en su carpeta.
+                </li>
+                <img src="../static/samba/15.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <img src="../static/samba/16.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+            </ul>
+
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Conclusión sobre Samba:</h3>
+            <p class="text-center text-white">
+                Samba facilita compartir archivos entre Linux/Unix y clientes Windows mediante SMB. Una implementación
+                segura depende de mantener permisos del sistema y del recurso alineados, usar versiones modernas del
+                protocolo y conceder acceso solo a cuentas autorizadas.
+            </p>
+
+        </div>
+
+        <div class="container text-center bg-black text-white col-12 mt-1 rounded-4">
+            <h2 class="text-center text-white fw-bold">Acceso y referencia del servicio:</h2>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Sin instancia pública:</strong> Configura el acceso de Samba en tu propio entorno; <a href="#"
+                    class="alert-link">no hay una dirección publicada aquí</a>.
+            </div>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Parámetro de acceso (configurar en el entorno)</p>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Parámetro</th>
+                                <th scope="col">Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dirección</td>
+                                <td>No configurada ni publicada en este proyecto</td>
+                            </tr>
+                        </tbody>
+                </div>
+            </div>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Datos técnicos de referencia</p>
+                        <thead>
+                            <tr>
+                                <th scope="col">Parámetro</th>
+                                <th scope="col">Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>Software</td>
+                                <td>Samba</td>
+                            </tr>
+                            <tr>
+                                <td>Función</td>
+                                <td>Compartición de archivos e impresoras</td>
+                            </tr>
+                            <tr>
+                                <td>Protocolo</td>
+                                <td>SMB2 / SMB3</td>
+                            </tr>
+                            <tr>
+                                <td>Puerto habitual</td>
+                                <td>TCP 445</td>
+                            </tr>
+                            <tr>
+                                <td>Configuración</td>
+                                <td>smb.conf y permisos del sistema</td>
+                            </tr>
+                            <tr>
+                                <td>Implementación</td>
+                                <td>Requiere cuentas y recursos configurados</td>
+                            </tr>
+                        </tbody>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

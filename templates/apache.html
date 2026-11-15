@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apache HTTP Server</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="container text-center bg-dark">
+    <div class=" container-fluidrow text-center text-dark m-3">
+        <a href="../Index.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Menu principal</p>
+        </a>
+        <a href="nosotros.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Nosotros</p>
+        </a>
+        <a href="servicios.html" class="col-sm-2 btn btn-warning m-1">
+            <p class="fw-bold">Servicios</p>
+        </a>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
+        <h1 class="text-center text-white fw-bold">APACHE HTTP SERVER</h1>
+        <div class="container text-center bg-black col-9 mt-1 rounded-4 p-2">
+
+            <img src="../static/apache.jpg" alt="Apache HTTP Server" class="img-fluid rounded-4 mx-auto d-block ">
+        </div>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4">
+        <h3 class="text-center text-white fw-bold">¿Qué es Apache HTTP Server?</h3>
+        <p class="text-center text-white">
+            Apache HTTP Server (httpd) es un servidor web de código abierto mantenido por Apache Software Foundation.
+            Recibe solicitudes HTTP, entrega contenido estático y puede integrarse con aplicaciones mediante módulos y
+            configuraciones de proxy, virtual hosts y TLS.
+        </p>
+        <h3 class="text-center text-white fw-bold">Características principales de Apache HTTP Server:</h3>
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Configuración modular</h5>
+                        <p class="card-text">
+                            Configuraci?n modular: las directivas y m?dulos permiten habilitar funciones seg?n las
+                            necesidades del sitio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Virtual hosts</h5>
+                        <p class="card-text">
+                            Virtual hosts: un mismo servidor puede atender distintos nombres de dominio y sitios con
+                            configuraciones separadas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Registros y diagnóstico</h5>
+                        <p class="card-text">
+                            Registro y diagn?stico: genera registros de acceso y error ?tiles para supervisar
+                            solicitudes y resolver problemas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center bg-black mt-1 rounded-4">
+            <div>
+                <h3 class="text-center text-white fw-bold col-12">Protocolos y tecnologías habituales:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">HTTP para solicitudes y respuestas web.</li>
+                    <li class="list-group-item bg-dark text-white">HTTPS para conexiones HTTP protegidas con TLS.</li>
+                    <li class="list-group-item bg-dark text-white">HTTP/2 cuando se habilita el módulo y las condiciones
+                        lo permiten.</li>
+                    <li class="list-group-item bg-dark text-white">WebSocket mediante configuración de proxy y los
+                        módulos correspondientes.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="text-white">
+        <div class="row">
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Ventajas de usar Apache HTTP Server:</h3>
+                <ul class="list-group list-group-flush col-10 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Software libre y disponible en numerosas
+                        distribuciones y sistemas operativos.</li>
+                    <li class="list-group-item bg-dark text-white">Configuración flexible mediante archivos de texto y
+                        módulos.</li>
+                    <li class="list-group-item bg-dark text-white">Permite alojar varios sitios en un servidor mediante
+                        virtual hosts.</li>
+                    <li class="list-group-item bg-dark text-white">Registros de acceso y error útiles para
+                        administración.</li>
+                    <li class="list-group-item bg-dark text-white">Amplia documentación oficial y ecosistema de módulos.
+                    </li>
+                </ul>
+            </div>
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Desventajas de usar Apache HTTP Server:</h3>
+                <ul class="list-group list-group-flush col-10 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">La administración requiere comprender directivas,
+                        módulos y permisos del sistema.</li>
+                    <li class="list-group-item bg-dark text-white">La configuración y sus rutas varían entre
+                        distribuciones.</li>
+                    <li class="list-group-item bg-dark text-white">Módulos innecesarios y una configuración débil
+                        aumentan la superficie de riesgo.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="containter text-center bg-black">
+            <h3 class="text-center text-white fw-bold">Funcionamiento de Apache HTTP Server:</h3>
+            <p class="text-center text-white">
+                Apache escucha en los puertos configurados y procesa cada solicitud usando sus directivas y módulos. La
+                configuración define el contenido raíz, los permisos, los registros y los virtual hosts que relacionan
+                nombres de host con sitios. Puede servir archivos directamente o reenviar solicitudes a una aplicación;
+                HTTPS requiere habilitar TLS y configurar un certificado apropiado.
+            </p>
+        </div>
+        <hr class="text-white">
+        <div class="container text-center bg-black">
+
+            <h3 class="text-center text-white fw-bold">Virtualización e implementación de Apache HTTP Server:</h3>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Documentación:</strong> Consulta la <a
+                    href="https://httpd.apache.org/docs/2.4/getting-started.html" class="alert-link">guía oficial de
+                    Apache HTTP Server</a>. Las capturas que siguen se conservaron del tutorial de TrueNAS y son solo
+                una referencia visual de VirtualBox; no muestran la instalación de este servicio.
+            </div>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>VirtualBox:</strong> Consulta las <a href="https://www.virtualbox.org/wiki/Downloads"
+                    class="alert-link">descargas oficiales</a> si necesitas virtualizar el entorno.
+            </div>
+            <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
+                <h2 class="text-center fw-bold">Preparación de la máquina virtual</h2>
+                <li>Para la instalacion de nuestro apache, sera necesaria actualizar nuesto SO.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo apt update</p>
+                </div>
+                <img src="../static/apache/1.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora podremos instalar apache</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo apt install apache2 -y</p>
+                </div>
+                <img src="../static/apache/2.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Una vez instalado apache, revisaremos su estado.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo systemctl status apache2</p>
+                </div>
+                <img src="../static/apache/3.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Para esta configuracion, tendremos que ir a configuracion de la VM, en el apartado de red y cambiar
+                    a adaptador puente</li>
+                <div class="alert alert-info alert-dismissible fade show">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>Cambio:</strong> Este cambio es necesario para que nuestra maquina virtual pueda conectarse
+                    a la red de nuestra computadora y asi poder tener acceso a internet.
+                </div>
+                <img src="../static/apache/4.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Una vez hecho este cambio, revisaremos nuestra ip de nuestra maquina virtual.</li>
+                </li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">ip a</p>
+                </div>
+                <img src="../static/apache/5.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora listaremos las aplicaciones registradas en ufw</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo ufw app list</p>
+                </div>
+                <img src="../static/apache/6.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Y habilitaremos el servicio de ufw para Apache para el trafico hacia nuestro servicio por el puerto
+                    80</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo ufw allow 'Apache'</p>
+                </div>
+                <img src="../static/apache/7.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora vamos a revisar el estado de nuestro ufw</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo ufw status</p>
+                </div>
+                <img src="../static/apache/8.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora Asignaremos la propiedad de la carpeta al usuario del servidor web (www-data) y a tu usuario
+                    actual ($USER) y tambien Otorgaremos permisos de lectura/escritura a tu usuario y al servidor web, y
+                    lectura a los demás:</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo chown -R $USER:www-data /var/www/html</p>
+                    <p class="fw-bold">sudo chmod -R 755 /var/www/html</p>
+
+                </div>
+                <img src="../static/apache/9.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <!--                 <hr class="text-white">
+                <h2 class="text-center fw-bold">Instalación y configuración de apache</h2> -->
+                <li>ahora con la ip de nuestra maquina virtual, podremos acceder a nuestro servicio de apache desde
+                    nuestro navegador.
+                </li>
+                <img src="../static/apache/10.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+            </ul>
+
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Conclusión sobre Apache HTTP Server:</h3>
+            <p class="text-center text-white">
+                Apache HTTP Server es una opción flexible y ampliamente disponible para publicar sitios web. Su
+                configuración modular y los virtual hosts permiten adaptarlo a distintos despliegues; mantener módulos
+                mínimos, permisos adecuados y TLS correctamente configurado es esencial.
+            </p>
+
+        </div>
+
+        <div class="container text-center bg-black text-white col-12 mt-1 rounded-4">
+            <h2 class="text-center text-white fw-bold">Acceso y referencia del servicio:</h2>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Sin instancia pública:</strong> Configura el acceso de Apache HTTP Server en tu propio entorno;
+                <a href="#" class="alert-link">no hay una dirección publicada aquí</a>.
+            </div>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Parámetro de acceso</p>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Parámetro</th>
+                                <th scope="col">ip</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dirección</td>
+                                <td>192.168.1.100</td>
+                            </tr>
+                        </tbody>
+                </div>
+            </div>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Datos técnicos de referencia</p>
+                        <thead>
+                            <tr>
+                                <th scope="col">Parámetro</th>
+                                <th scope="col">Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>Software</td>
+                                <td>Apache HTTP Server (httpd)</td>
+                            </tr>
+                            <tr>
+                                <td>Función</td>
+                                <td>Servidor web</td>
+                            </tr>
+                            <tr>
+                                <td>Protocolos</td>
+                                <td>HTTP, HTTPS; HTTP/2 opcional</td>
+                            </tr>
+                            <tr>
+                                <td>Puertos web habituales</td>
+                                <td>80 / 443</td>
+                            </tr>
+                            <tr>
+                                <td>Configuración</td>
+                                <td>Archivos de texto; varía por distribución</td>
+                            </tr>
+                            <tr>
+                                <td>Implementación</td>
+                                <td>Requiere configuración en el entorno</td>
+                            </tr>
+                        </tbody>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
