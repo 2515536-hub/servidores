@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samba - servidor de archivos SMB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/image-preview.js" defer></script>
+</head>
+
+<body class="container text-center bg-dark">
+    <div
+        class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2 text-center text-dark my-3">
+        <a href="../Index.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Inicio</span>
+        </a>
+        <a href="nosotros.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Nosotros</span>
+        </a>
+        <a href="servicios.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Modulos</span>
+        </a>
+    </div>
+    <div class="container text-white">
+        <a href="dhcp.html" class="btn btn-dark" target="_self">
+
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+        </a>
+        <a href="ftp.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+        </a>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
+        <h1 class="text-center text-white fw-bold">DNS</h1>
+        <div class="container text-center bg-black col-9 mt-1 rounded-4 p-2">
+
+            <img src="../static/dns.jpg" alt="dns" class="img-fluid rounded-4 mx-auto d-block ">
+        </div>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4">
+        <h3 class="text-center text-white fw-bold">¿Qué es DNS?</h3>
+        <p class="text-center text-white">
+            DNS (Domain Name System) es el servicio encargado de traducir nombres legibles para las personas, como
+            ejemplo.com, a direcciones IP que los equipos pueden entender. Sin DNS, la navegación y muchos servicios de
+            red serían mucho más difíciles de localizar y administrar.
+        </p>
+        <h3 class="text-center text-white fw-bold">Características principales de DNS:</h3>
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Resolución de nombres</h5>
+                        <p class="card-text">
+                            Permite asociar dominios, subdominios y hosts a direcciones IP y a otros recursos de la red,
+                            con la misma lógica que un directorio telefónico para Internet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Administración de zonas</h5>
+                        <p class="card-text">
+                            Los administradores pueden definir registros como A, AAAA, MX, CNAME y TXT para controlar
+                            cómo se resuelven los servicios y dominios internos o públicos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Caché y redundancia</h5>
+                        <p class="card-text">
+                            Los servidores DNS pueden almacenar respuestas temporales y operar en jerarquías para
+                            mejorar
+                            la velocidad, la disponibilidad y la tolerancia a fallos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center bg-black mt-1 rounded-4">
+            <div>
+                <h3 class="text-center text-white fw-bold col-12">Protocolos y tecnologías habituales:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Puerto 53 con tráfico UDP para consultas rápidas y
+                        TCP cuando se requiere transferencia de zonas mayores.</li>
+                    <li class="list-group-item bg-dark text-white">Registros A, AAAA, CNAME, MX, TXT y NS para definir
+                        la identidad y servicios del dominio.</li>
+                    <li class="list-group-item bg-dark text-white">SOA y TTL para controlar la autoridad de zona y el
+                        tiempo de caché de las respuestas.</li>
+                    <li class="list-group-item bg-dark text-white">Jerarquía de servidores raíz, TLD y autoritativos
+                        para distribuir la resolución de forma escalable.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="text-white">
+        <div class="row">
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Ventajas de usar DNS:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Permite acceder a servicios por nombre en lugar de
+                        recordar direcciones IP.</li>
+                    <li class="list-group-item bg-dark text-white">Simplifica la administración de servidores,
+                        aplicaciones y dominios.</li>
+                    <li class="list-group-item bg-dark text-white">Mejora la escalabilidad con zonas, subdominios y
+                        delegación de autoridad.</li>
+                    <li class="list-group-item bg-dark text-white">Facilita la disponibilidad de servicios internos y
+                        externos con caché y redundancia.</li>
+                    <li class="list-group-item bg-dark text-white">Es esencial para la navegación, correo, autenticación
+                        y servicios web.</li>
+                </ul>
+            </div>
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Desventajas de usar DNS:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Si el servicio falla, los nombres no se resuelven
+                        correctamente.</li>
+                    <li class="list-group-item bg-dark text-white">Un registro mal configurado puede causar errores de
+                        acceso o pérdida de servicios.</li>
+                    <li class="list-group-item bg-dark text-white">La caché y la propagación de cambios requieren
+                        planificación para evitar inconsistencias.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="containter text-center bg-black">
+            <h3 class="text-center text-white fw-bold">Funcionamiento de DNS:</h3>
+            <p class="text-center text-white">
+                Cuando un cliente quiere acceder a un nombre, consulta primero a un servidor resolver. Si no tiene la
+                respuesta en caché, realiza la búsqueda en la jerarquía DNS hasta llegar al servidor autoritativo que
+                contiene la zona correspondiente. Ese servidor devuelve la dirección IP asociada y el cliente puede
+                conectarse al servicio solicitado.
+            </p>
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Casos de uso y valor del servicio:</h3>
+            <div class="row g-3 text-start text-white">
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Servicios web y internos</h5>
+                            <p class="card-text mb-0 text-white">
+                                DNS permite publicar sitios, aplicaciones, correos y servicios internos usando nombres
+                                fáciles de recordar. Esto facilita la operación diaria y la administración de red.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Disponibilidad y organización</h5>
+                            <p class="card-text mb-0 text-white">
+                                Con registros bien definidos, subdominios y servicios distribuidos, DNS ofrece un punto
+                                central para la resolución de nombres y la gestión de infraestructura.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Información técnica útil</h3>
+            <div class="table-responsive">
+                <table class="table table-dark table-bordered align-middle">
+                    <thead>
+                        <tr>
+                            <th class="text-warning">Aspecto</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-white">
+                        <tr>
+                            <td>Puertos principales</td>
+                            <td>53/UDP para consultas normales y 53/TCP para transferencia de zonas y respuestas
+                                mayores.</td>
+                        </tr>
+                        <tr>
+                            <td>Registros comunes</td>
+                            <td>A, AAAA, CNAME, MX, NS, TXT y SOA para definir nombres, IPs y servicios del dominio.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Servidor autoritativo</td>
+                            <td>Es el que contiene la zona oficial del dominio y responde con información definitiva.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Casos típicos</td>
+                            <td>Publicar sitios web, servicios de correo, servidores internos, balanceadores y
+                                aplicaciones.</td>
+                        </tr>
+                        <tr>
+                            <td>Consideraciones</td>
+                            <td>Es importante mantener registros correctos, TTL adecuados y copias de seguridad de la
+                                zona.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="container text-center bg-black">
+
+            <h3 class="text-center text-white fw-bold">Virtualización e implementación de DNS:</h3>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Documentación:</strong> Consulta la <a
+                    href="https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server" class="alert-link"
+                    target="_self">guía oficial de Samba</a>. Las capturas que siguen se conservaron del tutorial de
+                TrueNAS y son solo una referencia visual de VirtualBox; no muestran la instalación de este servicio.
+            </div>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>VirtualBox:</strong> Consulta las <a href="https://www.virtualbox.org/wiki/Downloads"
+                    class="alert-link" target="_self">descargas oficiales</a> si necesitas virtualizar el entorno.
+            </div>
+            <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
+                <h2 class="text-center fw-bold">Preparación de la máquina virtual</h2>
+                <li>Para la instalacion de nuestro servidor DHCP es necesaria antes haber instalado los paquetes.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">
+                        sudo apt update
+                    </p>
+                    <p class="fw-bold">
+                        sudo apt install -y isc-dhcp-server bind9 bind9utils vsftpd
+                    </p>
+                </div>
+                <li>Aplicaremos un comando para configurar las opciones generales del DNS</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo nano /etc/bind/named.conf.options</p>
+                </div>
+                <img src="../static/DNS/1.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora vamos a declarar las zonas del DNS</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo nano /etc/bind/named.conf.local</p>
+                </div>
+                <img src="../static/DNS/2.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Configuraremos la zona directa</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo nano /etc/bind/db.midominio.local</p>
+                </div>
+                <img src="../static/DNS/3.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Configuraremos la zona inversa</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo nano /etc/bind/db.192.168.30</p>
+                </div>
+                <img src="../static/DNS/4.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Validaremos y reiniciaremos el servicio</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo named-checkconf</p>
+                    <p class="fw-bold">sudo named-checkzone midominio.local /etc/bind/db.midominio.local</p>
+                    <p class="fw-bold">sudo named-checkzone 1.168.192.in-addr.arpa /etc/bind/db.192.168.1</p>
+                    <p class="fw-bold">sudo systemctl restart bind9</p>
+                    <p class="fw-bold">sudo systemctl enable bind9</p>
+                    <p class="fw-bold">sudo systemctl status bind9</p>
+                </div>
+            </ul>
+
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Conclusión sobre DNS:</h3>
+            <p class="text-center text-white">
+                El servidor DNS automatiza la resolución de nombres de dominio en una red, mejorando la gestión y
+                reduciendo errores de configuración. Su implementación segura requiere una adecuada planificación y
+                monitoreo.
+            </p>
+
+        </div>
+
+        <div class="container text-center bg-black text-white col-12 mt-1 rounded-4">
+            <h2 class="text-center text-white fw-bold">Implementacion:</h2>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Datos técnicos de las IPs</p>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">IP</th>
+                                <th scope="col">Servidor</th>
+                                <th scope="col">Dominio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>192.168.30.100</td>
+                                <td>Apache</td>
+                                <td>midominio.local</td>
+                            </tr>
+                            <tr>
+                                <td>192.168.30.101</td>
+                                <td>Samba</td>
+                                <td>midominio.local</td>
+                            </tr>
+                            <tr>
+                                <td>192.168.30.102</td>
+                                <td>IIS</td>
+                                <td>midominio.local</td>
+                            </tr>
+                            <tr>
+                                <td>192.168.30.103</td>
+                                <td>TrueNAS</td>
+                                <td>midominio.local</td>
+                            </tr>
+                            <tr>
+                                <td>192.168.30.104</td>
+                                <td>ZABBIX</td>
+                                <td>midominio.local</td>
+                            </tr>
+                            <tr>
+                                <td>192.168.30.105</td>
+                                <td>PBX</td>
+                                <td>midominio.local</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-white pb-2">
+        <a href="dhcp.html" class="btn btn-dark" target="_self">
+
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+        </a>
+        <a href="ftp.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+
+        </a>
+    </div>
+</body>
+
+</html>

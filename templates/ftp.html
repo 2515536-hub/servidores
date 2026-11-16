@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samba - servidor de archivos SMB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/image-preview.js" defer></script>
+</head>
+
+<body class="container text-center bg-dark">
+    <div
+        class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2 text-center text-dark my-3">
+        <a href="../Index.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Inicio</span>
+        </a>
+        <a href="nosotros.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Nosotros</span>
+        </a>
+        <a href="servicios.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Modulos</span>
+        </a>
+    </div>
+    <div class="container text-white">
+        <a href="dns.html" class="btn btn-dark" target="_self">
+
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+        </a>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
+        <h1 class="text-center text-white fw-bold">FTP</h1>
+        <div class="container text-center bg-black col-9 mt-1 rounded-4 p-2">
+
+            <img src="../static/ftp.jpg" alt="ftp" class="img-fluid rounded-4 mx-auto d-block ">
+        </div>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4">
+        <h3 class="text-center text-white fw-bold">¿Qué es FTP?</h3>
+        <p class="text-center text-white">
+            FTP (File Transfer Protocol) es un protocolo diseñado para transferir archivos entre un cliente y un
+            servidor a través de una red. Su uso principal es la subida y descarga de contenidos, especialmente cuando
+            se requiere un acceso estructurado a carpetas y archivos remotos.
+        </p>
+        <h3 class="text-center text-white fw-bold">Características principales de FTP:</h3>
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Transferencia de archivos</h5>
+                        <p class="card-text">
+                            Permite subir, descargar, renombrar y organizar archivos mediante conexiones de control y de
+                            datos entre cliente y servidor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Autenticación y permisos</h5>
+                        <p class="card-text">
+                            Las credenciales del usuario y los permisos del sistema permiten controlar qué carpetas o
+                            archivos pueden accederse y modificar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Modos de conexión</h5>
+                        <p class="card-text">
+                            Puede operar en modo activo o pasivo, adaptándose a distintos tipos de redes y firewalls
+                            para
+                            mantener la transferencia funcional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center bg-black mt-1 rounded-4">
+            <div>
+                <h3 class="text-center text-white fw-bold col-12">Protocolos y tecnologías habituales:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Puerto 21 para el canal de control del servidor FTP.
+                    </li>
+                    <li class="list-group-item bg-dark text-white">Canales de datos para la transferencia real de
+                        archivos, según el modo activo o pasivo.</li>
+                    <li class="list-group-item bg-dark text-white">Transferencias binarias y texto, útiles para archivos
+                        de sistema o contenido digital.</li>
+                    <li class="list-group-item bg-dark text-white">Implementaciones seguras como FTPS o SFTP cuando se
+                        requiere cifrado adicional.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="text-white">
+        <div class="row">
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Ventajas de usar FTP:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Permite transferir archivos de forma sencilla y
+                        directa entre cliente y servidor.</li>
+                    <li class="list-group-item bg-dark text-white">Es útil para publicar contenido, respaldos o archivos
+                        compartidos en red.</li>
+                    <li class="list-group-item bg-dark text-white">Soporta cargas pesadas de archivos y gestión de
+                        carpetas por usuarios.</li>
+                    <li class="list-group-item bg-dark text-white">Funciona bien con clientes ampliamente compatibles en
+                        distintos sistemas operativos.</li>
+                    <li class="list-group-item bg-dark text-white">Se puede integrar con permisos y accesos específicos
+                        por carpeta o usuario.</li>
+                </ul>
+            </div>
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Desventajas de usar FTP:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">El protocolo clásico no cifra los datos ni las
+                        credenciales.</li>
+                    <li class="list-group-item bg-dark text-white">Puede requerir ajustes adicionales en firewalls y NAT
+                        para modo activo.</li>
+                    <li class="list-group-item bg-dark text-white">La gestión de permisos debe revisarse para evitar
+                        accesos no autorizados.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="containter text-center bg-black">
+            <h3 class="text-center text-white fw-bold">Funcionamiento de FTP:</h3>
+            <p class="text-center text-white">
+                El cliente se conecta al servidor sobre el puerto 21 para iniciar sesión y gestionar la sesión de
+                control.
+                Luego se abre una conexión de datos para subir o descargar archivos, dependiendo del modo activo o
+                pasivo.
+                El servidor valida al usuario, controla el acceso a las carpetas y realiza la transferencia según los
+                permisos establecidos.
+            </p>
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Casos de uso y valor del servicio:</h3>
+            <div class="row g-3 text-start text-white">
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Publicación y carga de archivos</h5>
+                            <p class="card-text mb-0 text-white">
+                                FTP es útil para subir contenido a un servidor, publicar archivos para clientes o
+                                compartir
+                                documentos entre usuarios con permisos específicos en una estructura organizada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Administración remota</h5>
+                            <p class="card-text mb-0 text-white">
+                                En muchas infraestructuras, FTP sigue siendo una opción para transferir archivos de
+                                forma
+                                centralizada, especialmente en entornos heredados o con dispositivos que requieren
+                                acceso
+                                simple a carpetas compartidas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Información técnica útil</h3>
+            <div class="table-responsive">
+                <table class="table table-dark table-bordered align-middle">
+                    <thead>
+                        <tr>
+                            <th class="text-warning">Aspecto</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-white">
+                        <tr>
+                            <td>Puertos principales</td>
+                            <td>21/TCP para el canal de control y puertos dinámicos para la transferencia de datos según
+                                el modo activo o pasivo.</td>
+                        </tr>
+                        <tr>
+                            <td>Autenticación</td>
+                            <td>El cliente se identifica con usuario y contraseña y luego accede a rutas permitidas por
+                                el servidor.</td>
+                        </tr>
+                        <tr>
+                            <td>Modos</td>
+                            <td>Activo y pasivo, según la topología de red y la forma en que los firewalls permiten la
+                                conexión.</td>
+                        </tr>
+                        <tr>
+                            <td>Casos típicos</td>
+                            <td>Subida y descarga de contenido, archivos de trabajo, respaldos y entrega de recursos
+                                desde un servidor central.</td>
+                        </tr>
+                        <tr>
+                            <td>Consideraciones</td>
+                            <td>Para entornos con seguridad exigente, suele preferirse FTPS o SFTP por cifrado y mejor
+                                protección.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="container text-center bg-black">
+
+            <h3 class="text-center text-white fw-bold">Virtualización e implementación de FTP:</h3>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Documentación:</strong> Consulta la <a
+                    href="https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server" class="alert-link"
+                    target="_self">guía oficial de Samba</a>. Las capturas que siguen se conservaron del tutorial de
+                TrueNAS y son solo una referencia visual de VirtualBox; no muestran la instalación de este servicio.
+            </div>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>VirtualBox:</strong> Consulta las <a href="https://www.virtualbox.org/wiki/Downloads"
+                    class="alert-link" target="_self">descargas oficiales</a> si necesitas virtualizar el entorno.
+            </div>
+            <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
+                <h2 class="text-center fw-bold">Preparación de la máquina virtual</h2>
+                <li>Para la instalacion de nuestro servidor FTP es necesaria antes haber instalado los paquetes.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">
+                        sudo apt update
+                    </p>
+                    <p class="fw-bold">
+                        sudo apt install -y isc-dhcp-server bind9 bind9utils vsftpd
+                    </p>
+                </div>
+                <li>Antes que nada, realilzamos una copia de seguridad del archivo de configuracion y realizamos los
+                    cambios necesarios</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo cp /etc/bind/named.conf.options /etc/bind/named.conf.options.bak</p>
+                    <p class="fw-bold">sudo nano /etc/bind/named.conf.options</p>
+                </div>
+                <li>Ahora en el documento se esbribira tal cual esto</li>
+                <div class="alert bg-dark alert-dismissible fade show text-center">
+                    <p class="fw-bold">
+                        listen=YES
+                    </p>
+                    <p class="fw-bold">listen_ipv6=NO</p>
+                    <p class="fw-bold">anonymous_enable=NO</p>
+                    <p class="fw-bold">local_enable=YES</p>
+                    <p class="fw-bold">write_enable=YES</p>
+                    <p class="fw-bold">local_umask=022</p>
+                    <p class="fw-bold">dirmessage_enable=YES</p>
+                    <p class="fw-bold">use_localtime=YES</p>
+                    <p class="fw-bold">xferlog_enable=YES</p>
+                    <p class="fw-bold">connect_from_port_20=YES</p>
+                    <p class="fw-bold">chroot_local_user=YES</p>
+                    <p class="fw-bold">allow_writeable_chroot=YES</p>
+                    <p class="fw-bold">secure_chroot_dir=/var/run/vsftpd/empty</p>
+                    <p class="fw-bold">pam_service_name=vsftpd</p>
+                    <p class="fw-bold">pasv_enable=YES</p>
+                    <p class="fw-bold">pasv_min_port=40000</p>
+                    <p class="fw-bold">pasv_max_port=40100</p>
+                </div>
+                <img src="../static/FTP/1.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Una vez hecho eso podemos crear nuestro usuario</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo adduser ftpuser</p>
+                </div>
+                <img src="../static/FTP/2.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora reiniciamos el servicio para que tome los cambios y lo habilitamos</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo systemctl restart vsftpd</p>
+                    <p class="fw-bold">sudo systemctl enable vsftpd</p>
+                </div>
+                <li>Por ultimo configuraremos el firewall</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo ufw allow OpenSSH</p>
+                    <p class="fw-bold">sudo ufw allow 53</p>
+                    <p class="fw-bold">sudo ufw allow 67/udp</p>
+                    <p class="fw-bold">sudo ufw allow 21/tcp</p>
+                    <p class="fw-bold">sudo ufw allow 40000:40100/tcp</p>
+                    <p class="fw-bold">sudo ufw enable</p>
+                </div>
+                <img src="../static/FTP/3.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+            </ul>
+
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Conclusión sobre FTP:</h3>
+            <p class="text-center text-white">
+                El servidor FTP permite la transferencia de archivos entre un cliente y un servidor, facilitando el
+                intercambio de datos. Su implementación segura requiere una adecuada planificación y monitoreo.
+            </p>
+
+        </div>
+
+        <div class="container text-center bg-black text-white col-12 mt-1 rounded-4">
+            <h2 class="text-center text-white fw-bold">Implementacion:</h2>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Uso de FTP</p>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre de Usuario</th>
+                                <th scope="col">Contraseña</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>chrisftp</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>cesarftp</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>hanielftp</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>johnftp</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>angelftp</td>
+                                <td>1234</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-white pb-2">
+        <a href="dns.html" class="btn btn-dark" target="_self">
+
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+        </a>
+    </div>
+</body>
+
+</html>
