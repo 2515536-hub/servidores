@@ -6,19 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>truenas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/image-preview.js" defer></script>
 </head>
 
 <body class="container text-center bg-dark">
-    <div class=" container-fluidrow text-center text-dark m-3">
-        <a href="../Index.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Menu principal</p>
+    <div
+        class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2 text-center text-dark my-3">
+        <a href="../Index.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Inicio</span>
         </a>
-        <a href="nosotros.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Nosotros</p>
+        <a href="nosotros.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Nosotros</span>
         </a>
-        <a href="servicios.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Servicios</p>
+        <a href="servicios.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Modulos</span>
+        </a>
+    </div>
+    <div class="container text-white">
+
+        <a href="iis.html" class="btn btn-dark" target="_self">
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+
+        </a>
+
+        <a href="zabbix.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+
         </a>
     </div>
     <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
@@ -135,17 +158,94 @@
                 que garantiza la disponibilidad de los datos incluso en caso de fallos de hardware.
             </p>
         </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Casos de uso y valor de TrueNAS:</h3>
+            <div class="row g-3 text-start text-white">
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Almacenamiento crítico y compartido</h5>
+                            <p class="card-text mb-0 text-white">
+                                TrueNAS destaca en entornos con archivos institucionales, backups, almacenamiento de
+                                máquinas virtuales, bibliotecas multimedia o compartidos de trabajo. Su arquitectura ZFS
+                                permite centralizar la capacidad y reducir la pérdida de datos por fallos de disco.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Disponibilidad y recuperación</h5>
+                            <p class="card-text mb-0 text-white">
+                                Es una excelente opción para organizaciones que necesitan instantáneas, replicación,
+                                resiliencia y capacidad de gestión desde una interfaz intuitiva. Ideal para despliegues
+                                con crecimiento gradual y requerimientos de alta disponibilidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Información técnica útil</h3>
+            <div class="table-responsive">
+                <table class="table table-dark table-bordered align-middle">
+                    <thead>
+                        <tr>
+                            <th class="text-warning">Aspecto</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-white">
+                        <tr>
+                            <td>Puertos principales</td>
+                            <td>80/TCP y 443/TCP para la interfaz web, 22/TCP para SSH si está habilitado, y 445/TCP
+                                para SMB, 2049/TCP para NFS y 3260/TCP para iSCSI.</td>
+                        </tr>
+                        <tr>
+                            <td>Requisitos comunes</td>
+                            <td>Hardware compatible con RAM suficiente, discos duros o SSD apropiados, y preferiblemente
+                                ECC en entornos con datos críticos.</td>
+                        </tr>
+                        <tr>
+                            <td>Protocolos soportados</td>
+                            <td>SMB/CIFS, NFS, iSCSI, AFP/compatibilidad, FTP y servicios de sincronización/replicación
+                                según la versión.</td>
+                        </tr>
+                        <tr>
+                            <td>Arquitectura clave</td>
+                            <td>ZFS, pools, vdevs, instantáneas, protección contra corrupción y estrategias de mirroring
+                                o RAID-Z.</td>
+                        </tr>
+                        <tr>
+                            <td>Consideraciones</td>
+                            <td>Es clave dimensionar la capacidad, la tolerancia a fallos y el tipo de discos para
+                                evitar pérdida de datos y degradación del rendimiento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <hr class="text-white">
         <div class="container text-center bg-black">
 
             <h3 class="text-center text-white fw-bold">Como se virtualiza:</h3>
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>Info!</strong> Puedes descargar la ISO de TrueNAS <a href="#" class="alert-link">aqui</a>
+                <strong>Atencion:</strong> Puedes descargar virtualBox 
+                <a href="https://httpd.apache.org/docs/2.4/getting-started.html" class="alert-link" target="_self">
+                    Aqui
+                </a>
             </div>
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>Info!</strong> Puedes descargar el .exe de VirtualBox <a href="#" class="alert-link">aqui</a>
+                <strong>Atencion:</strong>Puedes descargar la ISO de TrueNAS 
+                <a href="https://www.virtualbox.org/wiki/Downloads"
+                    class="alert-link" target="_self">Aqui
+                </a>
             </div>
             <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
                 <h2 class="text-center fw-bold">Creacion de la VM</h2>
@@ -264,17 +364,17 @@
         </div>
 
         <div class="container text-center bg-black text-white col-12 mt-1 rounded-4">
-            <h2 class="text-center text-white fw-bold">Ver el servidor en funcionamiento:</h2>
+            <h2 class="text-center text-white fw-bold">Acceso y referencia del servicio:</h2>
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>Info!</strong> Puedes acceder al servidor de TrueNAS 
-                <a href="https://10.0.0.20" class="alert-link">aqui</a>
+                <strong>Info!</strong> Puedes acceder al servidor de TrueNAS
+                <a href="https://10.0.0.20" class="alert-link" target="_self">aqui</a>
             </div>
             <div class="row text-center bg-black mt-1 rounded-4">
                 <div>
                     <table class="table table-dark table-striped w-50 mx-auto rounded-4">
                         <p>Credenciales: para acceder al servidor</p>
-                        
+
                         <thead>
                             <tr>
                                 <th scope="col">Usuario</th>
@@ -287,6 +387,7 @@
                                 <td>Truenas_1234</td>
                             </tr>
                         </tbody>
+                    </table>
                 </div>
             </div>
             <div class="row text-center bg-black mt-1 rounded-4">
@@ -301,8 +402,12 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>ip</td>
-                                <td>\\10.0.0.20</td>
+                                <td>IP</td>
+                                <td>\\192.168.30.103</td>
+                            </tr>
+                            <tr>
+                                <td>Dominio</td>
+                                <td>\\truenas.local</td>
                             </tr>
                             <tr>
                                 <td>chris</td>
@@ -326,10 +431,31 @@
                             </tr>
 
                         </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
+    </div>
+    <div class="container text-white pb-2">
+
+        <a href="iis.html" class="btn btn-dark" target="_self">
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+
+        </a>
+
+        <a href="zabbix.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+
+        </a>
     </div>
 </body>
 

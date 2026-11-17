@@ -6,19 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samba - servidor de archivos SMB</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/image-preview.js" defer></script>
 </head>
 
 <body class="container text-center bg-dark">
-    <div class=" container-fluidrow text-center text-dark m-3">
-        <a href="../Index.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Menu principal</p>
+    <div
+        class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2 text-center text-dark my-3">
+        <a href="../Index.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Inicio</span>
         </a>
-        <a href="nosotros.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Nosotros</p>
+        <a href="nosotros.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Nosotros</span>
         </a>
-        <a href="servicios.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Servicios</p>
+        <a href="servicios.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Modulos</span>
+        </a>
+    </div>
+    <div class="container text-white">
+
+        <a href="apache.html" class="btn btn-dark" target="_self">
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+
+        </a>
+
+        <a href="iis.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+
         </a>
     </div>
     <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
@@ -42,8 +65,8 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Compartición de archivos</h5>
                         <p class="card-text">
-                            Compartici?n de archivos: publica directorios de red mediante recursos compartidos SMB y
-                            controla qui?n puede acceder.
+                            Comparticion de archivos: publica directorios de red mediante recursos compartidos SMB y
+                            controla quien puede acceder.
                         </p>
                     </div>
                 </div>
@@ -53,7 +76,7 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Autenticación y permisos</h5>
                         <p class="card-text">
-                            Autenticaci?n y permisos: combina cuentas del sistema, usuarios Samba y reglas de acceso
+                            Autenticacion y permisos: combina cuentas del sistema, usuarios Samba y reglas de acceso
                             para proteger los recursos.
                         </p>
                     </div>
@@ -64,7 +87,7 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Integración de red</h5>
                         <p class="card-text">
-                            Integraci?n de red: puede trabajar como servidor independiente o participar en entornos de
+                            Integracion de red: puede trabajar como servidor independiente o participar en entornos de
                             dominio compatibles.
                         </p>
                     </div>
@@ -125,21 +148,94 @@
                 autenticación y resolución de nombres dependen también de la infraestructura correspondiente.
             </p>
         </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Casos de uso y valor del servicio:</h3>
+            <div class="row g-3 text-start text-white">
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Compartir archivos entre equipos</h5>
+                            <p class="card-text mb-0 text-white">
+                                Samba es útil en entornos donde varias estaciones trabajan con documentos, respaldos,
+                                carpetas de producción o recursos compartidos. Permite que equipos Linux y Windows usen
+                                el
+                                mismo repositorio central sin depender de un sistema propietario.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Administración y seguridad</h5>
+                            <p class="card-text mb-0 text-white">
+                                Su mayor fortaleza es la combinación entre interoperabilidad y control de acceso. Con
+                                reglas de permisos, grupos y autenticación bien diseñadas, puede funcionar como una capa
+                                de almacenamiento compartido confiable para oficinas pequeñas y medianas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Información técnica útil</h3>
+            <div class="table-responsive">
+                <table class="table table-dark table-bordered align-middle">
+                    <thead>
+                        <tr>
+                            <th class="text-warning">Aspecto</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-white">
+                        <tr>
+                            <td>Puertos principales</td>
+                            <td>137/UDP, 138/UDP, 139/TCP y 445/TCP para SMB/CIFS. Estos puertos permiten compartir
+                                archivos y recursos de red.</td>
+                        </tr>
+                        <tr>
+                            <td>Requisitos comunes</td>
+                            <td>Linux/Unix con paquetes de Samba, usuarios del sistema, permisos de carpetas y red local
+                                o dominio configurado.</td>
+                        </tr>
+                        <tr>
+                            <td>Protocolos</td>
+                            <td>SMB2/SMB3, NetBIOS/Name Service, autenticación local o integrada con dominios
+                                compatibles.</td>
+                        </tr>
+                        <tr>
+                            <td>Casos típicos</td>
+                            <td>Compartir documentos, impresoras, archivos de producción y directorios de trabajo entre
+                                equipos Windows y Linux.</td>
+                        </tr>
+                        <tr>
+                            <td>Consideraciones</td>
+                            <td>Es recomendable limitar usuarios y permisos, usar seguridad por ACL y evitar recursos
+                                públicos sin autenticación.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <hr class="text-white">
         <div class="container text-center bg-black">
 
             <h3 class="text-center text-white fw-bold">Virtualización e implementación de Samba:</h3>
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>Documentación:</strong> Consulta la <a
-                    href="https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server"
-                    class="alert-link">guía oficial de Samba</a>. Las capturas que siguen se conservaron del tutorial de
-                TrueNAS y son solo una referencia visual de VirtualBox; no muestran la instalación de este servicio.
+                <strong>Atencion:</strong> Puedes descargar virtualBox
+                <a href="https://httpd.apache.org/docs/2.4/getting-started.html" class="alert-link" target="_self">
+                    Aqui
+                </a>
             </div>
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>VirtualBox:</strong> Consulta las <a href="https://www.virtualbox.org/wiki/Downloads"
-                    class="alert-link">descargas oficiales</a> si necesitas virtualizar el entorno.
+                <strong>Atencion:</strong>Puedes descargar la ISO de Ubuntu Server 24.0.4
+                <a href="https://www.virtualbox.org/wiki/Downloads" class="alert-link" target="_self">Aqui
+                </a>
             </div>
             <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
                 <h2 class="text-center fw-bold">Preparación de la máquina virtual</h2>
@@ -236,7 +332,7 @@
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 <strong>Sin instancia pública:</strong> Configura el acceso de Samba en tu propio entorno; <a href="#"
-                    class="alert-link">no hay una dirección publicada aquí</a>.
+                    class="alert-link" target="_self">no hay una dirección publicada aquí</a>.
             </div>
             <div class="row text-center bg-black mt-1 rounded-4">
                 <div>
@@ -251,53 +347,76 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Dirección</td>
-                                <td>No configurada ni publicada en este proyecto</td>
+                                <td>cesar</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>christopher</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>jonathan</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>haniel</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>angel</td>
+                                <td>1234</td>
                             </tr>
                         </tbody>
+                    </table>
                 </div>
             </div>
             <div class="row text-center bg-black mt-1 rounded-4">
                 <div>
                     <table class="table table-dark table-striped w-50 mx-auto rounded-4">
-                        <p>Datos técnicos de referencia</p>
+                        <p>Credenciales de acceso</p>
                         <thead>
                             <tr>
-                                <th scope="col">Parámetro</th>
-                                <th scope="col">Detalle</th>
+                                <th scope="col">Parametro</th>
+                                <th scope="col">IP</th>
                             </tr>
                         </thead>
                         <tbody>
 
                             <tr>
-                                <td>Software</td>
-                                <td>Samba</td>
+                                <td>Direccion</td>
+                                <td>192.168.30.101</td>
                             </tr>
                             <tr>
-                                <td>Función</td>
-                                <td>Compartición de archivos e impresoras</td>
+                                <td>Dominio</td>
+                                <td>http://samba.com</td>
                             </tr>
-                            <tr>
-                                <td>Protocolo</td>
-                                <td>SMB2 / SMB3</td>
-                            </tr>
-                            <tr>
-                                <td>Puerto habitual</td>
-                                <td>TCP 445</td>
-                            </tr>
-                            <tr>
-                                <td>Configuración</td>
-                                <td>smb.conf y permisos del sistema</td>
-                            </tr>
-                            <tr>
-                                <td>Implementación</td>
-                                <td>Requiere cuentas y recursos configurados</td>
-                            </tr>
+
                         </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
+    </div>
+    <div class="container text-white pb-2">
+
+        <a href="apache.html" class="btn btn-dark" target="_self">
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+
+        </a>
+
+        <a href="iis.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+
+        </a>
     </div>
 </body>
 

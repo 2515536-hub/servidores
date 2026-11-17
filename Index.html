@@ -7,19 +7,55 @@
     <title>Servidores</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .mxgraph,
+        .mxgraph svg,
+        .mxgraph canvas,
+        .mxgraph>div {
+            background-color: #ffffff !important;
+        }
+
+        .scroll-panel {
+            width: 18rem;
+            max-height: 33rem;
+            overflow-y: auto;
+            position: relative;
+            padding: 2rem 0.75rem 0 0;
+            margin-left: 0.5rem;
+            scrollbar-width: thin;
+            scrollbar-color: #f4b400 rgba(0, 0, 0, 0.08);
+        }
+
+        .scroll-panel::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .scroll-panel::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.06);
+            border-radius: 999px;
+        }
+
+        .scroll-panel::-webkit-scrollbar-thumb {
+            background: #f4b400;
+            border-radius: 999px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+    </style>
 </head>
 
 <body class="container text-center bg-dark">
-    <div class=" container-fluidrow text-center text-dark m-3">
-        <a href="Index.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Menu principal</p>
+    <div
+        class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2 text-center text-dark my-3">
+        <a href="Index.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Inicio</span>
         </a>
-        <a href="./templates/nosotros.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Nosotros</p>
+        <a href="./templates/nosotros.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Nosotros</span>
         </a>
-        <a href="./templates/servicios.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Modulos</p>
-        </a>`
+        <a href="./templates/servicios.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Modulos</span>
+        </a>
     </div>
     <div id="demo" class="carousel slide mb-4" data-bs-ride="carousel">
 
@@ -33,20 +69,19 @@
             <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
         </div>
 
-        <!-- The slideshow/carousel -->
         <div class="carousel-inner rounded-4 ">
             <div class="carousel-item active">
-                <a href="/templates/apache.html">
+                <a href="/templates/apache.html" target="_self">
                     <img src="./static/apache.jpg" alt="Los Angeles" class="d-block w-100">
                     <div class="carousel-caption text-white fw-bold">
-                        <h3>Apache</h3>
-                        <p>Servidor WEB</p>
+                        <h3 class="text-black">Apache</h3>
+                        <p class="text-black">Servidor WEB</p>
                     </div>
                 </a>
             </div>
 
             <div class="carousel-item">
-                <a href="/templates/samba.html">
+                <a href="/templates/samba.html" target="_self">
 
                     <img src="./static/samba.png" alt="Chicago" class="d-block w-100">
                     <div class="carousel-caption text-dark fw-bold">
@@ -57,7 +92,7 @@
             </div>
 
             <div class="carousel-item">
-                <a href="/templates/iis.html">
+                <a href="/templates/iis.html" target="_self">
                     <img src="./static/IIS.jpg" alt="New York" class="d-block w-100">
                     <div class="carousel-caption text-white fw-bold">
                         <h3>IIS</h3>
@@ -67,7 +102,7 @@
             </div>
 
             <div class="carousel-item">
-                <a href="/templates/truenas.html">
+                <a href="/templates/truenas.html" target="_self">
                     <img src="./static/truenas.jpg" alt="New York" class="d-block w-100">
                     <div class="carousel-caption text-white fw-bold">
                         <h3>TrueNas</h3>
@@ -77,7 +112,7 @@
             </div>
 
             <div class="carousel-item">
-                <a href="/templates/zabbix.html">
+                <a href="/templates/zabbix.html" target="_self">
                     <img src="./static/zabbix.jpg" alt="New York" class="d-block w-100">
                     <div class="carousel-caption text-white fw-bold">
                         <h3>Zabbix</h3>
@@ -87,12 +122,12 @@
             </div>
 
             <div class="carousel-item">
-                <a href="/templates/pbx.html">
+                <a href="/templates/pbx.html" target="_self">
 
                     <img src="./static/pbx.jpg" alt="New York" class="d-block w-100">
                     <div class="carousel-caption text-dark fw-bold">
-                        <h3>PBX</h3>
-                        <p>Sistema de telefonía IP</p>
+                        <h3 class="text-white">PBX</h3>
+                        <p class="text-white">Sistema de telefonía IP</p>
                     </div>
                 </a>
             </div>
@@ -118,8 +153,8 @@
                         Servidor que permite alojar sitios web y aplicaciones web, es
                         uno de los servidores más utilizados en el mundo.
                     </p>
-                    <a href="./templates/apache.html" target="_blank" class="btn btn-outline-dark w-100 fw-bold">Learn
-                        More</a>
+                    <a href="./templates/apache.html" target="_self" class="btn btn-outline-dark w-100 fw-bold">Ver
+                        Mas</a>
                 </div>
             </div>
         </div>
@@ -132,8 +167,8 @@
                         Servidor que permite compartir archivos y impresoras en una red, es
                         ampliamente utilizado en entornos Linux y Windows.
                     </p>
-                    <a href="./templates/samba.html" target="_blank" class="btn btn-outline-dark w-100 fw-bold">Learn
-                        More</a>
+                    <a href="./templates/samba.html" target="_self" class="btn btn-outline-dark w-100 fw-bold">Ver
+                        Mas</a>
                 </div>
             </div>
         </div>
@@ -146,8 +181,8 @@
                         Servidor web de Microsoft, utilizado para alojar sitios web y aplicaciones web con el sistema
                         operativo de Windows.
                     </p>
-                    <a href="./templates/iis.html" target="_blank" class="btn btn-outline-dark w-100 fw-bold">Learn
-                        More</a>
+                    <a href="./templates/iis.html" target="_self" class="btn btn-outline-dark w-100 fw-bold">Ver
+                        Mas</a>
                 </div>
             </div>
         </div>
@@ -159,8 +194,8 @@
                     <p class="card-text">
                         Servidor de almacenamiento en red que permite centralizar y gestionar datos de manera eficiente.
                     </p>
-                    <a href="./templates/truenas.html" target="_blank" class="btn btn-outline-dark w-100 fw-bold">Learn
-                        More</a>
+                    <a href="./templates/truenas.html" target="_self" class="btn btn-outline-dark w-100 fw-bold">Ver
+                        Mas</a>
                 </div>
             </div>
         </div>
@@ -172,8 +207,8 @@
                     <p class="card-text">
                         Sistema de monitorización que permite rastrear el rendimiento y la salud de los servidores.
                     </p>
-                    <a href="./templates/zabbix.html" target="_blank" class="btn btn-outline-dark w-100 fw-bold">Learn
-                        More</a>
+                    <a href="./templates/zabbix.html" target="_self" class="btn btn-outline-dark w-100 fw-bold">Ver
+                        Mas</a>
                 </div>
             </div>
         </div>
@@ -185,13 +220,64 @@
                     <p class="card-text">
                         Sistema de conmutación de telefonía que permite gestionar llamadas y comunicaciones.
                     </p>
-                    <a href="./templates/pbx.html" target="_blank" class="btn btn-outline-dark w-100 fw-bold">Learn
-                        More</a>
+                    <a href="./templates/pbx.html" target="_self" class="btn btn-outline-dark w-100 fw-bold">Ver
+                        Mas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4 p-5 bg-warning text-white rounded text-start">
+        <h1>Como Funciona la red en la implementacion de este proyecto</h1>
+        <p class="fw-bold">En este apartado podemos visualizar el diagrama de funcionamiento de los dispositivos y la
+            conexion que hay entre cada uno de ellos, la forma de comportamiento que tendran y el flujo que existe en
+            esta arquitectura.</p>
+        <div class="container d-flex align-items-start gap-3">
+            <div class="mxgraph flex-grow-1"
+                style="max-width:100%;border:1px solid transparent;background:#fff; border-radius:1rem; min-width:0;"
+                data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot; id=\&quot;GDrFah5dBZ_3IcCx1ynZ\&quot;&gt;&lt;mxGraphModel dx=\&quot;881\&quot; dy=\&quot;571\&quot; grid=\&quot;1\&quot; gridSize=\&quot;10\&quot; guides=\&quot;1\&quot; tooltips=\&quot;1\&quot; connect=\&quot;1\&quot; arrows=\&quot;1\&quot; fold=\&quot;1\&quot; page=\&quot;1\&quot; pageScale=\&quot;1\&quot; pageWidth=\&quot;850\&quot; pageHeight=\&quot;1100\&quot; math=\&quot;0\&quot; shadow=\&quot;0\&quot;&gt;&lt;root&gt;&lt;mxCell id=\&quot;0\&quot;/&gt;&lt;mxCell id=\&quot;1\&quot; parent=\&quot;0\&quot;/&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-10\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YvCFbPR69KCdU-na-dPl-1\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;\&quot; target=\&quot;YvCFbPR69KCdU-na-dPl-7\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-45\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YvCFbPR69KCdU-na-dPl-1\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;\&quot; target=\&quot;YvCFbPR69KCdU-na-dPl-19\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-1\&quot; parent=\&quot;1\&quot; style=\&quot;image;aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/security/Router_VPN.svg;points=[[0.422,0,0],[0.574,1,0],[0,0.41,0],[0.998,0.597,0],[0.977,0.469,0],[0.982,0.704,0],[0.023,0.542,0],[0.01,0.307,0]];labelPerimeter=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;39.6\&quot; width=\&quot;55.800000000000004\&quot; x=\&quot;410\&quot; y=\&quot;30\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-7\&quot; parent=\&quot;1\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;180\&quot; width=\&quot;390\&quot; x=\&quot;30\&quot; y=\&quot;180\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-3\&quot; parent=\&quot;1\&quot; style=\&quot;verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.dhcp_server;labelPerimeter=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;90\&quot; width=\&quot;76\&quot; x=\&quot;187\&quot; y=\&quot;225\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-8\&quot; parent=\&quot;1\&quot; style=\&quot;verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.dns_server;labelPerimeter=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;92.5\&quot; width=\&quot;76.5\&quot; x=\&quot;60\&quot; y=\&quot;220\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-9\&quot; parent=\&quot;1\&quot; style=\&quot;verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.ftp_server;labelPerimeter=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;97\&quot; width=\&quot;71\&quot; x=\&quot;320\&quot; y=\&quot;225\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-11\&quot; parent=\&quot;1\&quot; style=\&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;30.5\&quot; width=\&quot;50\&quot; x=\&quot;60\&quot; y=\&quot;322\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-12\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-11\&quot; style=\&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-13\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-12\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;DNS\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-14\&quot; parent=\&quot;1\&quot; style=\&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;30.5\&quot; width=\&quot;50\&quot; x=\&quot;200\&quot; y=\&quot;322\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-15\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-14\&quot; style=\&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-16\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-15\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;DHCP\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-17\&quot; parent=\&quot;1\&quot; style=\&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; x=\&quot;330.5\&quot; y=\&quot;322\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-18\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-17\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;FTP\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-19\&quot; parent=\&quot;1\&quot; style=\&quot;rounded=0;whiteSpace=wrap;html=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;340\&quot; width=\&quot;300\&quot; x=\&quot;440\&quot; y=\&quot;180\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-21\&quot; parent=\&quot;1\&quot; style=\&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;30.5\&quot; width=\&quot;50\&quot; x=\&quot;460\&quot; y=\&quot;302\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-22\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-21\&quot; style=\&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-23\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-22\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;Apache\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-24\&quot; parent=\&quot;1\&quot; style=\&quot;image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/web_server.svg;points=[[0.442,0,0],[0.5,0.958,0],[0,0.52,0],[1,0.744,0],[0.678,0.098,0],[0.934,0.902,0],[0,0.852,0],[0,0.188,0]];labelPerimeter=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;80\&quot; width=\&quot;64\&quot; x=\&quot;453\&quot; y=\&quot;210\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-25\&quot; parent=\&quot;1\&quot; style=\&quot;image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/windows_server_2.svg;points=[[0.434,0.01,0],[0.5,0.907,0],[0,0.517,0],[0.997,0.636,0],[0.662,0.105,0],[0.878,0.97,0],[0,0.842,0],[0,0.193,0]];labelPerimeter=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;80\&quot; width=\&quot;64\&quot; x=\&quot;641.8\&quot; y=\&quot;211\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-26\&quot; parent=\&quot;1\&quot; style=\&quot;image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;points=[[0.5,0.052,0],[0.5,0.948,0],[0,0.545,0],[1,0.454,0],[0.999,0.108,0],[0.999,0.8,0],[0.001,0.89,0],[0.001,0.2,0]];labelPerimeter=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;80\&quot; width=\&quot;44.8\&quot; x=\&quot;552.6\&quot; y=\&quot;211\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-27\&quot; parent=\&quot;1\&quot; style=\&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;30.5\&quot; width=\&quot;50\&quot; x=\&quot;641.8\&quot; y=\&quot;302\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-28\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-27\&quot; style=\&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-29\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-28\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;IIS\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-30\&quot; parent=\&quot;1\&quot; style=\&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;30.5\&quot; width=\&quot;50\&quot; x=\&quot;544.8\&quot; y=\&quot;302\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-31\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-30\&quot; style=\&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-32\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-31\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;Samba\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-33\&quot; parent=\&quot;1\&quot; style=\&quot;image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;points=[[0.5,0.052,0],[0.5,0.948,0],[0,0.545,0],[1,0.454,0],[0.999,0.108,0],[0.999,0.8,0],[0.001,0.89,0],[0.001,0.2,0]];labelPerimeter=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;80\&quot; width=\&quot;44.8\&quot; x=\&quot;640\&quot; y=\&quot;352.5\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-34\&quot; parent=\&quot;1\&quot; style=\&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;30.5\&quot; width=\&quot;50\&quot; x=\&quot;457.4\&quot; y=\&quot;447.5\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-35\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-34\&quot; style=\&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-36\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-35\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;TrueNAS\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-37\&quot; parent=\&quot;1\&quot; style=\&quot;image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;points=[[0.5,0.052,0],[0.5,0.948,0],[0,0.545,0],[1,0.454,0],[0.999,0.108,0],[0.999,0.8,0],[0.001,0.89,0],[0.001,0.2,0]];labelPerimeter=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;80\&quot; width=\&quot;44.8\&quot; x=\&quot;460\&quot; y=\&quot;352.5\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-38\&quot; parent=\&quot;1\&quot; style=\&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;30.5\&quot; width=\&quot;50\&quot; x=\&quot;544.8000000000001\&quot; y=\&quot;447.5\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-39\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-38\&quot; style=\&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-40\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-39\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;Zabbix\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-41\&quot; parent=\&quot;1\&quot; style=\&quot;image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;points=[[0.5,0.052,0],[0.5,0.948,0],[0,0.545,0],[1,0.454,0],[0.999,0.108,0],[0.999,0.8,0],[0.001,0.89,0],[0.001,0.2,0]];labelPerimeter=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;80\&quot; width=\&quot;44.8\&quot; x=\&quot;550\&quot; y=\&quot;352.5\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-42\&quot; parent=\&quot;1\&quot; style=\&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;30.5\&quot; width=\&quot;50\&quot; x=\&quot;639.4\&quot; y=\&quot;447.5\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-43\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-42\&quot; style=\&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-44\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-43\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;PBX\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;31\&quot; width=\&quot;50\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-63\&quot; connectable=\&quot;0\&quot; parent=\&quot;1\&quot; style=\&quot;group\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;39.599999999999994\&quot; width=\&quot;170\&quot; x=\&quot;480\&quot; y=\&quot;30\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-56\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-63\&quot; style=\&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-57\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-56\&quot; style=\&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;60\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-58\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-57\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;Router\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;60\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;20\&quot; width=\&quot;60\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-59\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-63\&quot; style=\&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;170\&quot; y=\&quot;19.6\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-60\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-59\&quot; style=\&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;\&quot; value=\&quot;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;170\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-61\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-60\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;IP\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;60\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;20\&quot; width=\&quot;60\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-62\&quot; parent=\&quot;YvCFbPR69KCdU-na-dPl-60\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;192.168.30.0 /24\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;110\&quot; x=\&quot;60\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;20\&quot; width=\&quot;110\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-70\&quot; parent=\&quot;1\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;192.168.30.10 /24\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;110\&quot; x=\&quot;170\&quot; y=\&quot;190\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;20\&quot; width=\&quot;110\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-71\&quot; parent=\&quot;1\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;.100 /24\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;60\&quot; x=\&quot;453\&quot; y=\&quot;180\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;20\&quot; width=\&quot;110\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-72\&quot; parent=\&quot;1\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;.101 /24\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;60\&quot; x=\&quot;542.4\&quot; y=\&quot;180\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;20\&quot; width=\&quot;110\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-73\&quot; parent=\&quot;1\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;.102 /24\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;60\&quot; x=\&quot;639.4\&quot; y=\&quot;180\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;20\&quot; width=\&quot;110\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-74\&quot; parent=\&quot;1\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;.103 /24\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;60\&quot; x=\&quot;440\&quot; y=\&quot;500\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;20\&quot; width=\&quot;110\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-75\&quot; parent=\&quot;1\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;.104 /24\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;60\&quot; x=\&quot;537.4\&quot; y=\&quot;500\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;20\&quot; width=\&quot;110\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;YvCFbPR69KCdU-na-dPl-76\&quot; parent=\&quot;1\&quot; style=\&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;\&quot; value=\&quot;.105 /24\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;20\&quot; width=\&quot;60\&quot; x=\&quot;635\&quot; y=\&quot;500\&quot; as=\&quot;geometry\&quot;&gt;&lt;mxRectangle height=\&quot;20\&quot; width=\&quot;110\&quot; as=\&quot;alternateBounds\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;&lt;/diagram&gt;&lt;/mxfile&gt;&quot;,&quot;toolbar&quot;:&quot;pages zoom layers lightbox&quot;,&quot;page&quot;:0}">
+            </div>
+
+            <div class="scroll-panel" data-bs-spy="scroll" data-bs-target="#scrollspy-menu" data-bs-offset="20"
+                tabindex="0">
+
+
+                <div id="section1" class="bg-light text-dark rounded p-3 mb-3">
+                    <h5>Sección 1 Conexion</h5>
+                    <p>La red 192.168.30.0/24 conecta todos los equipos mediante un router. Una máquina virtual con
+                        Ubuntu Server 24.04 (IP fija 192.168.30.10) ofrece DHCP, DNS y FTP. Las demás máquinas virtuales
+                        (TrueNAS, Samba, Apache, IIS, PBX y Zabbix) son sus clientes y reciben de él IP y dominio
+                        servidores.local.</p>
+                </div>
+
+                <div id="section2" class="bg-light text-dark rounded p-3 mb-3">
+                    <h5>Sección 2 Servicios</h5>
+                    <p>Los tres servicios comparten IP, pero cada uno usa su propio puerto. El DHCP (UDP 67) reparte
+                        direcciones del .100 al .200. El DNS (puerto 53) traduce los nombres de servidores.local a su
+                        IP.
+                        El FTP (TCP 21 y puertos pasivos 40000 a 40100) permite subir y descargar archivos.</p>
+                </div>
+
+                <div id="section3" class="bg-light text-dark rounded p-3 mb-3">
+                    <h5>Sección 3 Arranque</h5>
+                    <p>Al arrancar, cada máquina pide IP al DHCP (Apache .100, Samba .101, IIS .102,
+                        TrueNAS .103, Zabbix .104 y PBX .105) y después usa el DNS para localizar a las demás por
+                        nombre.
+                        El DHCP debe ser el único de la red, el servidor debe tener IP fija y el firewall debe permitir
+                        los puertos de los tres servicios.</p>
+                </div>
+
+                <div id="section4" class="bg-light text-dark rounded p-3 mb-3">
+                    <h5>Sección 4 Flujo</h5>
+                    <p>El cliente obtiene IP del DHCP, resuelve nombres con el DNS y se conecta al servicio
+                        que necesita.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
 </body>
+
+<script type="text/javascript" src="https://app.diagrams.net/js/viewer-static.min.js"></script>
 
 </html>

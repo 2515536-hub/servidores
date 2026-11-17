@@ -6,19 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IIS - Internet Information Services</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/image-preview.js" defer></script>
 </head>
 
 <body class="container text-center bg-dark">
-    <div class=" container-fluidrow text-center text-dark m-3">
-        <a href="../Index.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Menu principal</p>
+    <div
+        class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2 text-center text-dark my-3">
+        <a href="../Index.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Inicio</span>
         </a>
-        <a href="nosotros.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Nosotros</p>
+        <a href="nosotros.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Nosotros</span>
         </a>
-        <a href="servicios.html" class="col-sm-2 btn btn-warning m-1">
-            <p class="fw-bold">Servicios</p>
+        <a href="servicios.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Modulos</span>
+        </a>
+    </div>
+    <div class="container text-white">
+
+        <a href="samba.html" class="btn btn-dark" target="_self">
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+
+        </a>
+
+        <a href="truenas.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+
         </a>
     </div>
     <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
@@ -42,7 +65,7 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Procesamiento de solicitudes</h5>
                         <p class="card-text">
-                            Procesamiento de solicitudes: HTTP.sys recibe tr?fico HTTP/HTTPS y lo dirige al sitio y al
+                            Procesamiento de solicitudes: HTTP.sys recibe trafico HTTP/HTTPS y lo dirige al sitio y al
                             grupo de aplicaciones correspondiente.
                         </p>
                     </div>
@@ -53,7 +76,7 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Integración con Windows</h5>
                         <p class="card-text">
-                            Integraci?n con Windows: se administra como rol de Windows Server y puede alojar contenido
+                            Integracion con Windows: se administra como rol de Windows Server y puede alojar contenido
                             est?tico y aplicaciones compatibles, incluido ASP.NET.
                         </p>
                     </div>
@@ -64,7 +87,7 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Administración de sitios</h5>
                         <p class="card-text">
-                            Administraci?n por sitios: permite configurar enlaces, certificados, m?dulos, permisos y
+                            Administracion por sitios: permite configurar enlaces, certificados, modulos, permisos y
                             grupos de aplicaciones de manera independiente.
                         </p>
                     </div>
@@ -125,21 +148,95 @@
                 certificados, y revisa los registros para comprobar solicitudes y errores.
             </p>
         </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Casos de uso y cuando elegir IIS:</h3>
+            <div class="row g-3 text-start text-white">
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Entornos Windows y .NET</h5>
+                            <p class="card-text mb-0 text-white">
+                                IIS es la opción natural cuando el servicio web debe integrarse con Windows Server,
+                                Active Directory, aplicaciones .NET Framework o ASP.NET Core y la administración del
+                                sistema operativo se realiza desde la misma infraestructura.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Seguridad y control del hosting</h5>
+                            <p class="card-text mb-0 text-white">
+                                Tiene ventajas claras en sitios empresariales con autenticación, certificados TLS,
+                                grupos de aplicaciones, restricciones por URL y monitoreo centralizado. Es especialmente
+                                útil cuando la organización ya tiene licenciamiento y experiencia en la pila de
+                                Microsoft.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Información técnica útil</h3>
+            <div class="table-responsive">
+                <table class="table table-dark table-bordered align-middle">
+                    <thead>
+                        <tr>
+                            <th class="text-warning">Aspecto</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-white">
+                        <tr>
+                            <td>Puertos principales</td>
+                            <td>80/TCP para HTTP y 443/TCP para HTTPS. También puede usarse FTP/FTPS y puertos
+                                personalizados en sitios específicos.</td>
+                        </tr>
+                        <tr>
+                            <td>Requisitos comunes</td>
+                            <td>Windows Server, roles de Web Server (IIS), .NET Framework o ASP.NET según la aplicación
+                                y mínimo de memoria recomendado según la carga.</td>
+                        </tr>
+                        <tr>
+                            <td>Protocolos y servicios</td>
+                            <td>HTTP, HTTPS, FTP, FTPS, WebSockets, Windows Authentication, certificados SSL y grupos de
+                                aplicaciones.</td>
+                        </tr>
+                        <tr>
+                            <td>Componentes importantes</td>
+                            <td>HTTP.sys, WAS, configuración de sitios, pools de aplicaciones, certificados y
+                                herramientas administrativas de Windows.</td>
+                        </tr>
+                        <tr>
+                            <td>Consideraciones</td>
+                            <td>Es fundamental mantener actualizados los roles, limitar permisos por sitio y revisar los
+                                registros de acceso para detectar fallos o ataques.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <hr class="text-white">
         <div class="container text-center bg-black">
 
             <h3 class="text-center text-white fw-bold">Virtualización e implementación de IIS:</h3>
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>Documentación:</strong> Consulta la <a
-                    href="https://learn.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture"
-                    class="alert-link">guía oficial de IIS</a>. Las capturas que siguen se conservaron del tutorial de
-                iis y son solo una referencia visual de VirtualBox; no muestran la instalación de este servicio.
+                <strong>Atencion:</strong> Puedes descargar virtualBox 
+                <a href="https://httpd.apache.org/docs/2.4/getting-started.html" class="alert-link" target="_self">
+                    Aqui
+                </a>
             </div>
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>VirtualBox:</strong> Consulta las <a href="https://www.virtualbox.org/wiki/Downloads"
-                    class="alert-link">descargas oficiales</a> si necesitas virtualizar el entorno.
+                <strong>Atencion:</strong>Puedes descargar la ISO Windows Server
+                <a href="https://www.virtualbox.org/wiki/Downloads"
+                    class="alert-link" target="_self">Aqui
+                </a>
             </div>
             <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
                 <h2 class="text-center fw-bold">Preparación de la máquina virtual</h2>
@@ -199,69 +296,51 @@
             <h2 class="text-center text-white fw-bold">Acceso y referencia del servicio:</h2>
             <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>Sin instancia pública:</strong> Configura el acceso de IIS en tu propio entorno; <a href="#"
-                    class="alert-link">no hay una dirección publicada aquí</a>.
+                <strong>Acceso</strong> Puedes ver el servidor
+                <a href="http://iis.com" class="alert-link" target="_self">aquí</a>.
             </div>
             <div class="row text-center bg-black mt-1 rounded-4">
                 <div>
                     <table class="table table-dark table-striped w-50 mx-auto rounded-4">
-                        <p>Parámetro de acceso (configurar en el entorno)</p>
+                        <p>Parámetro de acceso</p>
 
                         <thead>
                             <tr>
                                 <th scope="col">Parámetro</th>
-                                <th scope="col">Detalle</th>
+                                <th scope="col">IP</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Dirección</td>
-                                <td>No configurada ni publicada en este proyecto</td>
+                                <td>192.168.30.102</td>
                             </tr>
                         </tbody>
-                </div>
-            </div>
-            <div class="row text-center bg-black mt-1 rounded-4">
-                <div>
-                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
-                        <p>Datos técnicos de referencia</p>
-                        <thead>
-                            <tr>
-                                <th scope="col">Parámetro</th>
-                                <th scope="col">Detalle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <tr>
-                                <td>Plataforma</td>
-                                <td>Windows Server</td>
-                            </tr>
-                            <tr>
-                                <td>Función</td>
-                                <td>Servidor web y de aplicaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Protocolos</td>
-                                <td>HTTP, HTTPS; FTP opcional</td>
-                            </tr>
-                            <tr>
-                                <td>Puertos web habituales</td>
-                                <td>80 / 443</td>
-                            </tr>
-                            <tr>
-                                <td>Herramienta</td>
-                                <td>IIS Manager</td>
-                            </tr>
-                            <tr>
-                                <td>Implementación</td>
-                                <td>Requiere configuración en el entorno</td>
-                            </tr>
-                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
+    </div>
+    <div class="container text-white pb-2">
+
+        <a href="samba.html" class="btn btn-dark" target="_self">
+            <svg xmlns=" http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-left p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+
+        </a>
+
+        <a href="truenas.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+
+        </a>
     </div>
 </body>
 

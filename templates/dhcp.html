@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samba - servidor de archivos SMB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/image-preview.js" defer></script>
+</head>
+
+<body class="container text-center bg-dark">
+    <div
+        class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2 text-center text-dark my-3">
+        <a href="../Index.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Inicio</span>
+        </a>
+        <a href="nosotros.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Nosotros</span>
+        </a>
+        <a href="servicios.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Modulos</span>
+        </a>
+    </div>
+    <div class="container text-white">
+        <a href="dns.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+        </a>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4 p-2">
+        <h1 class="text-center text-white fw-bold">DHCP</h1>
+        <div class="container text-center bg-black col-9 mt-1 rounded-4 p-2">
+
+            <img src="../static/dhcp.jpg" alt="dhcp" class="img-fluid rounded-4 mx-auto d-block ">
+        </div>
+    </div>
+    <div class="container text-center bg-black col-12 mt-1 rounded-4">
+        <h3 class="text-center text-white fw-bold">¿Qué es DHCP?</h3>
+        <p class="text-center text-white">
+            DHCP (Dynamic Host Configuration Protocol) es un protocolo de red que permite asignar de forma
+            automática direcciones IP y otros parámetros de configuración a los dispositivos conectados a la red,
+            como la máscara de subred, la puerta de enlace y los servidores DNS.
+        </p>
+        <h3 class="text-center text-white fw-bold">Características principales de DHCP:</h3>
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Asignación automática</h5>
+                        <p class="card-text">
+                            El servidor DHCP entrega direcciones IP de forma dinámica a cada equipo, reduciendo la
+                            configuración manual y evitando conflictos entre dispositivos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Gestión centralizada</h5>
+                        <p class="card-text">
+                            Desde un único punto se controlan rangos, reservas, tiempos de concesión y parámetros de
+                            red para toda la infraestructura.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Reservas y leases</h5>
+                        <p class="card-text">
+                            Se pueden reservar IPs para equipos específicos y ajustar los tiempos de concesión para
+                            mantener la red estable y ordenada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center bg-black mt-1 rounded-4">
+            <div>
+                <h3 class="text-center text-white fw-bold col-12">Protocolos y tecnologías habituales:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">UDP 67 y 68 para la comunicación entre cliente y
+                        servidor DHCP.</li>
+                    <li class="list-group-item bg-dark text-white">Proceso DORA: Discover, Offer, Request y Acknowledge
+                        para asignar la dirección.</li>
+                    <li class="list-group-item bg-dark text-white">Lease time para definir cuánto tiempo el equipo puede
+                        usar la IP asignada.</li>
+                    <li class="list-group-item bg-dark text-white">Configuración de gateway, DNS y opciones adicionales
+                        desde una sola autoridad central.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="text-white">
+        <div class="row">
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Ventajas de usar DHCP:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Reduce la configuración manual de cada equipo en la
+                        red.</li>
+                    <li class="list-group-item bg-dark text-white">Evita conflictos de IP y acelera la incorporación de
+                        nuevos dispositivos.</li>
+                    <li class="list-group-item bg-dark text-white">Permite centralizar la gestión de rangos, reservas y
+                        parámetros de red.</li>
+                    <li class="list-group-item bg-dark text-white">Facilita la administración de redes grandes, Wi‑Fi y
+                        entornos corporativos.</li>
+                    <li class="list-group-item bg-dark text-white">Ajusta dinámicamente la configuración con leases y
+                        tiempos de renovación.</li>
+                </ul>
+            </div>
+            <div class="container text-center bg-black col mt-1 rounded-4">
+                <h3 class="text-center text-white fw-bold">Desventajas de usar DHCP:</h3>
+                <ul class="list-group list-group-flush w-50 mx-auto rounded-4">
+                    <li class="list-group-item bg-dark text-white">Si el servidor falla, los equipos pueden perder
+                        configuración de red.</li>
+                    <li class="list-group-item bg-dark text-white">Un rango mal configurado puede dejar sin IP a equipos
+                        nuevos.</li>
+                    <li class="list-group-item bg-dark text-white">Las reservas y políticas deben gestionarse con
+                        cuidado
+                        para evitar errores.</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="containter text-center bg-black">
+            <h3 class="text-center text-white fw-bold">Funcionamiento de DHCP:</h3>
+            <p class="text-center text-white">
+                El cliente inicia una solicitud de red y el servidor DHCP responde con una oferta de configuración. Si
+                la
+                recibe, el equipo solicita la dirección y el servidor la concede mediante el proceso DORA: Discover,
+                Offer, Request y Acknowledge. Una vez asignada, el cliente usa la IP durante un periodo de tiempo
+                establecido por el lease.
+            </p>
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Casos de uso y valor del servicio:</h3>
+            <div class="row g-3 text-start text-white">
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Redes domésticas y pequeñas oficinas</h5>
+                            <p class="card-text mb-0 text-white">
+                                DHCP es ideal para ambientes donde hay muchos equipos conectados y se desea evitar la
+                                configuración manual en cada dispositivo. Solo se define el rango y la red funciona de
+                                forma
+                                ordenada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card bg-dark border-light h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Escalabilidad y administración</h5>
+                            <p class="card-text mb-0 text-white">
+                                En infraestructuras más grandes, DHCP permite asignar IPs según departamentos, reservas
+                                para
+                                servidores o impresoras, y parámetros centralizados como puerta de enlace, DNS y NTP.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Información técnica útil</h3>
+            <div class="table-responsive">
+                <table class="table table-dark table-bordered align-middle">
+                    <thead>
+                        <tr>
+                            <th class="text-warning">Aspecto</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-white">
+                        <tr>
+                            <td>Puertos principales</td>
+                            <td>UDP 67 y 68, usados por el servidor DHCP y los clientes para negociar la configuración
+                                de la red.</td>
+                        </tr>
+                        <tr>
+                            <td>Parámetros comunes</td>
+                            <td>IP, máscara de subred, puerta de enlace, DNS, dominio, NTP y tiempos de lease.</td>
+                        </tr>
+                        <tr>
+                            <td>Reserva</td>
+                            <td>Permite asignar la misma dirección a un equipo específico según su dirección MAC.</td>
+                        </tr>
+                        <tr>
+                            <td>Casos típicos</td>
+                            <td>Redes internas, Wi‑Fi, aulas, laboratorios, oficinas y entornos con múltiples
+                                dispositivos.</td>
+                        </tr>
+                        <tr>
+                            <td>Consideraciones</td>
+                            <td>Se recomienda proteger la red con rangos bien definidos, reservas y monitoreo del
+                                servicio.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="container text-center bg-black">
+
+            <h3 class="text-center text-white fw-bold">Virtualización e implementación de Samba:</h3>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Atencion:</strong> Puedes descargar virtualBox
+                <a href="https://httpd.apache.org/docs/2.4/getting-started.html" class="alert-link" target="_self">
+                    Aqui
+                </a>
+            </div>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Atencion:</strong>Puedes descargar la ISO de Ubuntu Server 24.0.4
+                <a href="https://www.virtualbox.org/wiki/Downloads" class="alert-link" target="_self">Aqui
+                </a>
+            </div>
+            <ul class="list-group list-group-flush w-50 mx-auto rounded-4 text-white">
+                <h2 class="text-center fw-bold">Preparación de la máquina virtual</h2>
+                <li>Para la instalacion de nuestro servidor DHCP es necesaria antes haber instalado los paquetes.</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">
+                        sudo apt update
+                    </p>
+                    <p class="fw-bold">
+                        sudo apt install -y isc-dhcp-server bind9 bind9utils vsftpd
+                    </p>
+                </div>
+                <li>Aplicaremos un comando para indicar la interfaz de red, en este caso tengo la interfaz enp0s3</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo nano /etc/default/isc-dhcp-server</p>
+                </div>
+                <img src="../static/DHCP/1.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora configuraremos la ip y el rango que dara nuestro servidor DHCP</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo nano /etc/dhcp/dhcpd.conf</p>
+                </div>
+                <img src="../static/DHCP/2.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+                <li>Ahora reiniciamos el servicio para que tome los cambios</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo systemctl restart isc-dhcp-server</p>
+                </div>
+                <li>Ahora verificamos que el servicio este corriendo</li>
+                <div class="alert bg-dark alert-dismissible fade show">
+                    <p class="fw-bold">sudo systemctl status isc-dhcp-server</p>
+                </div>
+                <img src="../static/DHCP/3.png" alt="virtualBox" class="img-fluid rounded mx-auto d-block">
+            </ul>
+
+        </div>
+
+        <div class="container text-center bg-black col-12 mt-1 rounded-4">
+            <h3 class="text-center text-white fw-bold">Conclusión sobre DHCP:</h3>
+            <p class="text-center text-white">
+                El servidor DHCP automatiza la asignación de direcciones IP en una red, mejorando la gestión y
+                reduciendo errores de configuración. Su implementación segura requiere una adecuada planificación y
+                monitoreo.
+            </p>
+
+        </div>
+
+        <div class="container text-center bg-black text-white col-12 mt-1 rounded-4">
+            <h2 class="text-center text-white fw-bold">Implementacion:</h2>
+            <div class="row text-center bg-black mt-1 rounded-4">
+                <div>
+                    <table class="table table-dark table-striped w-50 mx-auto rounded-4">
+                        <p>Datos técnicos de las IPs</p>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">IP</th>
+                                <th scope="col">Servidor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>192.168.30.100</td>
+                                <td>Apache</td>
+                            </tr>
+                            <tr>
+                                <td>192.168.30.101</td>
+                                <td>Samba</td>
+                            </tr>
+                            <tr>
+                                <td>192.168.30.102</td>
+                                <td>IIS</td>
+                            </tr>
+                            <tr>
+                                <td>192.168.30.103</td>
+                                <td>TrueNAS</td>
+                            </tr>
+                            <tr>
+                                <td>192.168.30.104</td>
+                                <td>ZABBIX</td>
+                            </tr>
+                            <tr>
+                                <td>192.168.30.105</td>
+                                <td>PBX</td>
+                            </tr>
+                            <tr>
+                                <td>192.168.30.10</td>
+                                <td>DHCP/DNS/FTP</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-white pb-2">
+        <a href="dns.html" class="btn btn-dark" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor"
+                class="bi bi-arrow-right p-1 rounded-4 b-white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+
+        </a>
+    </div>
+</body>
+
+</html>
