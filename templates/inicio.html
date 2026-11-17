@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TrueNAS SMB FileBrowser (PHP)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            background: #121212;
+            color: #eee;
+        }
+
+        .caja {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border: 1px solid #333;
+        }
+
+        input {
+            background: #2c2c2c;
+            color: white;
+            width: calc(100% - 22px);
+        }
+
+        button {
+            background: #4f5d95;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #3b4673;
+        }
+
+        button:disabled {
+            background: #555;
+            cursor: not-allowed;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .carpeta {
+            color: #8892bf;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .progreso-contenedor {
+            display: none;
+            margin-bottom: 15px;
+            background: #2c2c2c;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #444;
+        }
+
+        .progreso-barra {
+            height: 24px;
+            width: 0%;
+            background: #2e7d32;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            line-height: 24px;
+            text-align: center;
+            transition: width 0.2s ease;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2 text-center text-dark my-3"
+        id="botonera">
+        <a href="../Index.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Inicio</span>
+        </a>
+        <a href="nosotros.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Nosotros</span>
+        </a>
+        <a href="servicios.html" class="btn btn-warning btn-sm px-3 py-2" target="_self">
+            <span class="fw-bold">Modulos</span>
+        </a>
+    </div>
+    <h2>Explorador SMB con PHP - 192.168.100.17</h2>
+
+    <div class="caja" id="login-box">
+        <input type="text" id="usuario" placeholder="Usuario de TrueNAS">
+        <input type="password" id="password" placeholder="Contraseña">
+        <input type="text" id="recurso" placeholder="Nombre de la carpeta compartida (Share)">
+        <button onclick="conectar()">Conectar por SMB</button>
+    </div>
+
+    <div class="caja" id="explorer-box" style="display:none;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <strong id="ruta-actual">/</strong>
+            <button onclick="cerrarSesion()" style="background:#d32f2f;">Cerrar sesión</button>
+        </div>
+        <hr style="border-color:#333;">
+
+        <!-- Barra para subir archivos -->
+        <div id="barra-subida" style="margin: 15px 0; display: flex; gap: 10px; align-items: center;">
+            <input type="file" id="input-archivo" style="margin: 0; flex: 1;">
+            <button id="btn-subir" onclick="subirArchivo()" style="background: #2e7d32;">⬆ Subir aquí</button>
+        </div>
+
+        <div id="progreso-contenedor" class="progreso-contenedor">
+            <div id="progreso-barra" class="progreso-barra">0%</div>
+        </div>
+
+        <button onclick="subirNivel()" id="btn-atras" style="display:none;">⬅ Volver atrás</button>
+        <ul id="lista-archivos"></ul>
+    </div>
+
+    <script>
+        let credenciales = {};
+        let rutaActual = [];
+
+        window.addEventListener("DOMContentLoaded", function () {
+            const usuarioGuardado = sessionStorage.getItem("smb_usuario");
+            const passwordGuardado = sessionStorage.getItem("smb_password");
+            const recursoGuardado = sessionStorage.getItem("smb_recurso");
+
+            if (usuarioGuardado && passwordGuardado && recursoGuardado) {
+                credenciales = {
+                    usuario: usuarioGuardado,
+                    password: passwordGuardado,
+                    recurso: recursoGuardado
+                };
+                cargarDirectorio();
+            }
+        });
+
+        async function conectar() {
+            const usuario = document.getElementById("usuario").value.trim();
+            const password = document.getElementById("password").value;
+            const recurso = document.getElementById("recurso").value.trim();
+
+            if (!usuario || !password || !recurso) {
+                alert("Por favor llena todos los campos.");
+                return;
+            }
+
+            credenciales = { usuario: usuario, password: password, recurso: recurso };
+            rutaActual = [];
+
+            const exito = await cargarDirectorio();
+            if (exito) {
+                sessionStorage.setItem("smb_usuario", credenciales.usuario);
+                sessionStorage.setItem("smb_password", credenciales.password);
+                sessionStorage.setItem("smb_recurso", credenciales.recurso);
+            }
+        }
+
+        async function cargarDirectorio() {
+            const rutaTexto = rutaActual.join("/");
+            try {
+                const res = await fetch("../static/php/api.php", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        usuario: credenciales.usuario,
+                        password: credenciales.password,
+                        recurso: credenciales.recurso,
+                        accion: "listar",
+                        ruta: rutaTexto
+                    })
+                });
+
+                const textoRespuesta = await res.text();
+                let data;
+                try {
+                    data = JSON.parse(textoRespuesta);
+                } catch (err) {
+                    alert("Respuesta inválida de PHP:\n" + textoRespuesta);
+                    return false;
+                }
+
+                if (!data.ok) {
+                    alert("Error SMB: " + data.error);
+                    return false;
+                }
+                document.getElementById("botonera").classList.add("d-none");
+                document.getElementById("login-box").style.display = "none";
+                document.getElementById("explorer-box").style.display = "block";
+                document.getElementById("ruta-actual").innerText = "/" + rutaTexto;
+                document.getElementById("btn-atras").style.display = rutaActual.length > 0 ? "inline-block" : "none";
+
+                // Validar si es el usuario de solo descarga
+                const barraSubida = document.getElementById("barra-subida");
+                if (credenciales.usuario === "Archivo" && credenciales.password === "Archivo_1234") {
+                    barraSubida.style.display = "none";
+                } else {
+                    barraSubida.style.display = "flex";
+                }
+
+                const lista = document.getElementById("lista-archivos");
+                lista.innerHTML = "";
+
+                data.archivos.forEach(function (item) {
+                    const li = document.createElement("li");
+                    if (item.es_carpeta) {
+                        li.innerHTML = `<span class="carpeta" onclick="entrarCarpeta('${item.nombre}')">📁 ${item.nombre}</span>`;
+                    } else {
+                        li.innerHTML = `<span>📄 ${item.nombre}</span> <button onclick="descargar('${item.nombre}')">Descargar</button>`;
+                    }
+                    lista.appendChild(li);
+                });
+
+                return true;
+            } catch (error) {
+                alert("Error de red al conectar con api.php: " + error.message);
+                return false;
+            }
+        }
+
+        function entrarCarpeta(nombre) {
+            rutaActual.push(nombre);
+            cargarDirectorio();
+        }
+
+        function subirNivel() {
+            rutaActual.pop();
+            cargarDirectorio();
+        }
+
+        function descargar(nombreArchivo) {
+            const rutaTexto = rutaActual.join("/");
+            const rutaCompleta = rutaTexto ? rutaTexto + "/" + nombreArchivo : nombreArchivo;
+
+            const form = document.createElement("form");
+            form.method = "POST";
+            form.action = "../static/php/api.php";
+            form.style.display = "none";
+
+            const datos = {
+                accion: "descargar",
+                usuario: credenciales.usuario,
+                password: credenciales.password,
+                recurso: credenciales.recurso,
+                ruta_archivo: rutaCompleta
+            };
+
+            for (const clave in datos) {
+                const input = document.createElement("input");
+                input.type = "hidden";
+                input.name = clave;
+                input.value = datos[clave];
+                form.appendChild(input);
+            }
+
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+        }
+
+        function cerrarSesion() {
+            sessionStorage.clear();
+            credenciales = {};
+            location.reload();
+        }
+
+        async function subirArchivo() {
+            const inputArchivo = document.getElementById("input-archivo");
+            if (inputArchivo.files.length === 0) {
+                alert("Selecciona un archivo primero.");
+                return;
+            }
+
+            const archivo = inputArchivo.files.item(0);
+            const btnSubir = document.getElementById("btn-subir");
+            const contenedorProgreso = document.getElementById("progreso-contenedor");
+            const barraProgreso = document.getElementById("progreso-barra");
+
+            const tamanoBloque = 10 * 1024 * 1024; // 10 MB por bloque
+            const totalBloques = Math.ceil(archivo.size / tamanoBloque);
+
+            btnSubir.disabled = true;
+            contenedorProgreso.style.display = "block";
+            barraProgreso.style.width = "0%";
+            barraProgreso.style.background = "#2e7d32";
+            barraProgreso.innerText = "0%";
+
+            try {
+                for (let i = 0; i < totalBloques; i++) {
+                    const inicio = i * tamanoBloque;
+                    const fin = Math.min(inicio + tamanoBloque, archivo.size);
+                    const bloque = archivo.slice(inicio, fin);
+
+                    const formData = new FormData();
+                    formData.append("accion", "subir");
+                    formData.append("usuario", credenciales.usuario);
+                    formData.append("password", credenciales.password);
+                    formData.append("recurso", credenciales.recurso);
+                    formData.append("ruta", rutaActual.join("/"));
+                    formData.append("nombre_archivo", archivo.name);
+                    formData.append("indice_bloque", i);
+                    formData.append("total_bloques", totalBloques);
+                    formData.append("archivo", bloque);
+
+                    const res = await fetch("../static/php/api.php", {
+                        method: "POST",
+                        body: formData
+                    });
+
+                    const data = await res.json();
+                    if (!data.ok) {
+                        throw new Error(data.error);
+                    }
+
+                    const porcentaje = Math.round(((i + 1) / totalBloques) * 100);
+                    barraProgreso.style.width = porcentaje + "%";
+
+                    if (porcentaje < 100) {
+                        barraProgreso.innerText = porcentaje + "%";
+                    } else {
+                        barraProgreso.style.background = "#4f5d95";
+                        barraProgreso.innerText = "100% - Guardando en TrueNAS...";
+                    }
+                }
+
+                barraProgreso.style.background = "#2e7d32";
+                barraProgreso.innerText = "¡Completado!";
+                inputArchivo.value = "";
+                await cargarDirectorio();
+                setTimeout(function () {
+                    contenedorProgreso.style.display = "none";
+                }, 2000);
+
+            } catch (error) {
+                contenedorProgreso.style.display = "none";
+                alert("Error al subir: " + error.message);
+            } finally {
+                btnSubir.disabled = false;
+            }
+        }
+    </script>
+</body>
+
+</html>

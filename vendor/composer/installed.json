@@ -1,0 +1,86 @@
+{
+    "packages": [
+        {
+            "name": "icewind/smb",
+            "version": "3.8.1",
+            "version_normalized": "3.8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://codeberg.org/icewind/SMB",
+                "reference": "97063a63b44edc6554966f6121679506b8d85103"
+            },
+            "require": {
+                "icewind/streams": ">=0.7.3",
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "v3.89.0",
+                "phpstan/phpstan": "^0.12.57",
+                "phpunit/phpunit": "10.5.58",
+                "psalm/phar": "6.*"
+            },
+            "time": "2025-11-13T16:17:19+00:00",
+            "published-time": "2025-11-13T16:37:51+00:00",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "Icewind\\SMB\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robin Appelman",
+                    "email": "robin@icewind.nl"
+                }
+            ],
+            "description": "php wrapper for smbclient and libsmbclient-php",
+            "install-path": "../icewind/smb"
+        },
+        {
+            "name": "icewind/streams",
+            "version": "v0.7.8",
+            "version_normalized": "0.7.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://codeberg.org/icewind/streams",
+                "reference": "cb2bd3ed41b516efb97e06e8da35a12ef58ba48b"
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^9"
+            },
+            "time": "2024-12-05T14:36:22+00:00",
+            "published-time": "2024-12-05T14:37:08+00:00",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "Icewind\\Streams\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robin Appelman",
+                    "email": "icewind@owncloud.com"
+                }
+            ],
+            "description": "A set of generic stream wrappers",
+            "install-path": "../icewind/streams"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
