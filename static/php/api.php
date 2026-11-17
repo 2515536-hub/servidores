@@ -7,7 +7,7 @@ use Icewind\SMB\Options;
 
 header('Content-Type: application/json');
 
-$serverIp = '192.168.100.17';
+$serverIp = 'truenas.servidores.local';
 $contentType = $_SERVER['CONTENT_TYPE'] ?? '';
 
 if (stripos($contentType, 'application/json') !== false) {
